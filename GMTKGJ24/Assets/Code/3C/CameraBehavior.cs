@@ -10,12 +10,12 @@ public class CameraBehavior : MonoBehaviour
     
     void Start()
     {
-        gameObject.transform.rotation = Quaternion.Euler(LookRotation);
     }
 
     void Update()
     {
         var newPosition = FollowTarget.transform.position + PositionOffset;
         gameObject.transform.position = newPosition;
+        gameObject.transform.rotation = Quaternion.Euler(LookRotation);
     }
 }
