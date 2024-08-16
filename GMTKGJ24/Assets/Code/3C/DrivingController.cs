@@ -9,11 +9,6 @@ public class DrivingController : MonoBehaviour
     public float MaxVelocity = 20f;
     public Rigidbody Rigidbody;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         var verticalInput = Input.GetAxis("Vertical");
