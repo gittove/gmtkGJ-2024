@@ -30,6 +30,5 @@ public class ScaleReciever : MonoBehaviour
         }
 
         previousScale = CurrentScale;
-        Debug.Log($"Player scale: {CurrentScale}");
     }
 }
