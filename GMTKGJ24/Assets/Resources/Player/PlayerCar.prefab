@@ -48,10 +48,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8167ad54b01e64ebb6862417caf054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 20
-  TurnSpeed: 120
-  MaxVelocity: 40
+  MovementSpeed: 15
+  TurnSpeed: 3
+  MaxVelocity: 30
   Rigidbody: {fileID: 9173743438842922095}
+  ForwardDrag: 2
+  SidewayDrag: 4
+  DriftForwardDragMultiplier: 0.5
+  DriftSidewayDragMultiplier: 0.9
+  DriftingTurnSpeedMultiplier: 1.2
 --- !u!54 &9173743438842922095
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -61,8 +66,8 @@ Rigidbody:
   m_GameObject: {fileID: 3334854009784494693}
   serializedVersion: 4
   m_Mass: 10
-  m_Drag: 2
-  m_AngularDrag: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -129,7 +134,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 2.6409}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2889564603383695815}
