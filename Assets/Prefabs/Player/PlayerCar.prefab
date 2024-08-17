@@ -50,12 +50,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 40
   TurnSpeed: 3
+  MinimumTurnSpeedMultiplier: 0.8
   MaxVelocity: 30
   Rigidbody: {fileID: 9173743438842922095}
   ForwardDrag: 20
-  SidewayDrag: 3
-  DriftForwardDragMultiplier: 0.5
-  DriftSidewayDragMultiplier: 0.1
+  SidewayDrag: 10
+  DriftForwardDragMultiplier: 1.3
+  DriftSidewayDragMultiplier: 0.03
   DriftingTurnSpeedMultiplier: 1.2
 --- !u!54 &9173743438842922095
 Rigidbody:
@@ -275,11 +276,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5627208299445623239, guid: 02a32620c9629da4eaf5dfbd2fd6b39d, type: 3}
       propertyPath: PositionOffset.y
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5627208299445623239, guid: 02a32620c9629da4eaf5dfbd2fd6b39d, type: 3}
       propertyPath: PositionOffset.z
-      value: -10
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 7359552500436281408, guid: 02a32620c9629da4eaf5dfbd2fd6b39d, type: 3}
       propertyPath: m_LocalPosition.x
