@@ -1,9 +1,9 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ResturantManager : MonoBehaviour
 {
-    public int MaxActiveOrders = 3;
     public int MaxActiveRestaurants = 2;
     
     private float _timer;
@@ -11,7 +11,9 @@ public class ResturantManager : MonoBehaviour
     private Restaurant[] _restaurants;
 
     private Queue<Restaurant> _orderQueue;
-
+    
+    public delegate void OnOrder();
+    
     void Start()
     {
         _timer = 5f;
@@ -24,16 +26,17 @@ public class ResturantManager : MonoBehaviour
     void Update()
     {
         _timer -= Time.deltaTime;
+        
+        if (_orderQueue.Count == 0)
+        {
+            GenerateOrderQueue();
+            return;
+        }
 
         if (_timer <= 0)
         {
             TryActivateOrder();
             _timer = 5f;
-        }
-
-        if (_orderQueue.Count == 0)
-        {
-            GenerateOrderQueue();
         }
     }
 
@@ -48,7 +51,7 @@ public class ResturantManager : MonoBehaviour
         }
 
         var pickedRestaurant = _orderQueue.Dequeue();
-        while (pickedRestaurant.gameObject.GetComponent<Order>().isActiveAndEnabled)
+        while (pickedRestaurant.gameObject.GetComponentInChildren<Order>(includeInactive: true).isActiveAndEnabled)
         {
             pickedRestaurant = _orderQueue.Dequeue();
 

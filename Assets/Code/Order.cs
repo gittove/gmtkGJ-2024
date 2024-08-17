@@ -11,8 +11,7 @@ public class Order : MonoBehaviour
     {
         _timer = timer;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         _timer -= Time.deltaTime;
@@ -22,13 +21,25 @@ public class Order : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetButtonDown("Interact"))
+        {
+            Debug.Log("Picked up order");
+            gameObject.SetActive(false);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         if (enabled)
         {
             Gizmos.color = Color.green;
             Gizmos.DrawSphere(transform.position + transform.up * 1.5f, 0.2f);
+            
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawWireSphere(transform.position, GetComponent<SphereCollider>().radius);
         }
     }
 }
