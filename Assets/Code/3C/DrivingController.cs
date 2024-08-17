@@ -33,16 +33,17 @@ public class DrivingController : MonoBehaviour
         }
         
         var turnAngle = horizontalInput * currentTurnSpeed;
-        Vector3 moveVector = transform.forward * verticalInput * MovementSpeed;
-        
         var turnedDirection = Quaternion.AngleAxis(turnAngle, Vector3.up) * transform.forward;
         var desiredDirection = transform.forward + turnedDirection;
-        var speedMultiplier = math.unlerp(MaxVelocity, 0f, Rigidbody.linearVelocity.magnitude);
+        var speedMultiplier = math.unlerp(0f, MaxVelocity, Rigidbody.linearVelocity.magnitude);
         speedMultiplier = math.clamp(speedMultiplier, MinimumTurnSpeedMultiplier, 1f);
+        if (Rigidbody.linearVelocity.magnitude == 0f)
+            speedMultiplier = 0f;
         var rotatedForward = Vector3.RotateTowards(transform.forward, desiredDirection.normalized, currentTurnSpeed * deltaTime * speedMultiplier, MaxVelocity);
-        if(Rigidbody.linearVelocity.magnitude > 0.3f)
-            transform.rotation = Quaternion.LookRotation(rotatedForward.normalized);
-
+        /*if(Rigidbody.linearVelocity.magnitude > 0.3f)
+            transform.rotation = Quaternion.LookRotation(rotatedForward.normalized);*/
+        
+        Vector3 moveVector = rotatedForward * verticalInput * MovementSpeed;
         Rigidbody.linearVelocity += moveVector * deltaTime;
         Rigidbody.linearVelocity += ((transform.forward * moveDot * Rigidbody.linearVelocity.magnitude) - Rigidbody.linearVelocity) * sidewayDrag * deltaTime;
         var preDragVel = Rigidbody.linearVelocity;
@@ -51,5 +52,8 @@ public class DrivingController : MonoBehaviour
             Rigidbody.linearVelocity = Vector3.zero;
         var clampedVelocity = math.clamp(Rigidbody.linearVelocity, -MaxVelocity, MaxVelocity);
         Rigidbody.linearVelocity = clampedVelocity;
+        
+        if(Rigidbody.linearVelocity.magnitude > 0.3f)
+            transform.rotation = Quaternion.LookRotation(rotatedForward.normalized);
     }
 }

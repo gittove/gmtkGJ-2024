@@ -8,11 +8,7 @@ public class CameraBehavior : MonoBehaviour
 
     public Vector3 LookRotation;
     
-    void Start()
-    {
-    }
-
-    void Update()
+    void LateUpdate()
     {
         var newPosition = FollowTarget.transform.position + PositionOffset;
         gameObject.transform.position = newPosition;
