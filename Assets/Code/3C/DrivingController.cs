@@ -1,7 +1,4 @@
-using System;
 using Unity.Mathematics;
-using Unity.Mathematics.Geometry;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DrivingController : MonoBehaviour
@@ -26,6 +23,7 @@ public class DrivingController : MonoBehaviour
         var forwardDrag = ForwardDrag;
         var sidewayDrag = SidewayDrag;
         float currentTurnSpeed = TurnSpeed;
+        var moveDot = math.dot(transform.forward, Rigidbody.linearVelocity.normalized);
 
         if (drifting)
         {
@@ -36,7 +34,6 @@ public class DrivingController : MonoBehaviour
         
         var turnAngle = horizontalInput * currentTurnSpeed;
         Vector3 moveVector = transform.forward * verticalInput * MovementSpeed;
-        Debug.Log($"Move vector: {moveVector}");
         
         var turnedDirection = Quaternion.AngleAxis(turnAngle, Vector3.up) * transform.forward;
         var desiredDirection = transform.forward + turnedDirection;
@@ -46,9 +43,8 @@ public class DrivingController : MonoBehaviour
         if(Rigidbody.linearVelocity.magnitude > 0.3f)
             transform.rotation = Quaternion.LookRotation(rotatedForward.normalized);
 
-        var preMoveVel = Rigidbody.linearVelocity;
         Rigidbody.linearVelocity += moveVector * deltaTime;
-        Rigidbody.linearVelocity += ((transform.forward * Rigidbody.linearVelocity.magnitude) - preMoveVel) * sidewayDrag * deltaTime;
+        Rigidbody.linearVelocity += ((transform.forward * moveDot * Rigidbody.linearVelocity.magnitude) - Rigidbody.linearVelocity) * sidewayDrag * deltaTime;
         var preDragVel = Rigidbody.linearVelocity;
         Rigidbody.linearVelocity -= Rigidbody.linearVelocity.normalized * forwardDrag * deltaTime;
         if (math.dot(preDragVel, Rigidbody.linearVelocity) < 0f)
