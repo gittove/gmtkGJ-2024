@@ -11,6 +11,29 @@ public class Order : MonoBehaviour
     {
         _timer = timer;
     }
+
+    public void Complete()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnPickup(Transform newParent)
+    {
+        transform.parent = newParent;
+        
+        int orderID = gameObject.GetInstanceID();
+
+        var customers = FindObjectsByType<Customer>(FindObjectsSortMode.None);
+        int pickIndex = UnityEngine.Random.Range(0, customers.Length - 1);
+        
+        while (customers[pickIndex].GetComponent<Customer>().Occupied)
+        {
+            pickIndex = UnityEngine.Random.Range(0, customers.Length - 1);
+        }
+            
+        customers[pickIndex].GetComponent<Customer>().Activate(orderID);
+        
+    }
     
     void Update()
     {
@@ -18,7 +41,7 @@ public class Order : MonoBehaviour
 
         if (_timer <= 0f)
         {
-            gameObject.SetActive(false);
+            Destroy(this);
         }
     }
 
@@ -27,7 +50,8 @@ public class Order : MonoBehaviour
         if (Input.GetButtonDown("Interact"))
         {
             Debug.Log("Picked up order");
-            gameObject.SetActive(false);
+            
+            OnPickup(other.gameObject.transform);
         }
     }
 
@@ -39,7 +63,7 @@ public class Order : MonoBehaviour
             Gizmos.DrawSphere(transform.position + transform.up * 1.5f, 0.2f);
             
             Gizmos.color = Color.magenta;
-            Gizmos.DrawWireSphere(transform.position, GetComponent<SphereCollider>().radius);
+            Gizmos.DrawWireSphere(transform.position + GetComponent<SphereCollider>().center, GetComponent<SphereCollider>().radius);
         }
     }
 }

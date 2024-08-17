@@ -51,7 +51,7 @@ public class ResturantManager : MonoBehaviour
         }
 
         var pickedRestaurant = _orderQueue.Dequeue();
-        while (pickedRestaurant.gameObject.GetComponentInChildren<Order>(includeInactive: true).isActiveAndEnabled)
+        while (pickedRestaurant.gameObject.GetComponentInChildren<Order>() != null)
         {
             pickedRestaurant = _orderQueue.Dequeue();
 
