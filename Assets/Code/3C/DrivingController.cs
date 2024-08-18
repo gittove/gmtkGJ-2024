@@ -38,6 +38,8 @@ public class DrivingController : MonoBehaviour
 
     void Update()
     {
+        gameObject.transform.SetPositionAndRotation(new Vector3(transform.position.x, -0.155f * transform.localScale.y, transform.position.z), transform.rotation);
+        
         var verticalInput = Input.GetAxis("Vertical");
         var horizontalInput = Input.GetAxis("Horizontal");
         var drifting = Input.GetButton("Jump");
