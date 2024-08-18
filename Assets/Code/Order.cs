@@ -21,14 +21,14 @@ public class Order : MonoBehaviour
 
     public void Complete()
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 
     private void OnPickup(Transform newParent)
     {
         transform.parent = newParent;
         
-        int orderID = this.gameObject.GetInstanceID();
+        int orderID = GetInstanceID();
 
         var customers = FindObjectsByType<Customer>(FindObjectsSortMode.None);
         int pickIndex = UnityEngine.Random.Range(0, customers.Length - 1);
