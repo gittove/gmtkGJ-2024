@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CanEditMultipleObjects]
 [CustomEditor(typeof(SnapMarker))]
-public class Snapper : Editor
+public class Snapper : UnityEditor.Editor
 {
     private static float IncrementPos = 5f;
     private static float IncrementRotation = 90;
@@ -56,10 +56,5 @@ public class Snapper : Editor
             rotation.y = Mathf.Round(rotation.y / IncrementRotation) * IncrementRotation;
             obj.transform.rotation = Quaternion.Euler(rotation);
         }
-    }
-
-    public override void OnInspectorGUI()
-    {
-        EditorGUILayout.PropertyField(_this.FindProperty(nameof(IncrementPos)));
     }
 }

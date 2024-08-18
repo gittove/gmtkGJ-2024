@@ -182,6 +182,7 @@ MonoBehaviour:
   - Main
   - Main_Env
   - Main_Lighting
+  - UI
 --- !u!4 &1895683912
 Transform:
   m_ObjectHideFlags: 0
