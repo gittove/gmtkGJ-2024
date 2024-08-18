@@ -8,6 +8,8 @@ public class DrivingController : MonoBehaviour
     public float TurnSpeed = 3f;
     public float MinimumTurnSpeedMultiplier = 0.3f;
     public float MaxVelocity = 20f;
+    public float MaxVelocityBoost = 20f;
+    public float BoostTurnMultiplier = 0.25f;
 
     private ScaleReciever Scaler;
     
@@ -18,12 +20,6 @@ public class DrivingController : MonoBehaviour
     public float DriftForwardDragMultiplier = 0.5f;
     public float DriftSidewayDragMultiplier = 0.1f;
     public float DriftingTurnSpeedMultiplier = 1.2f;
-
-    private float BoostAmount;
-    public float MaxBoosAmount = 1.5f;
-    public float BoostRechargeSpeed = 5f;
-    public float BoostingMovementSpeedMultiplier = 2f;
-    public float BoostingMaxVelocityMultiplier = 2f;
     
     public ParticleSystem DrivingEmitter;
     private bool isRunning;
@@ -33,7 +29,6 @@ public class DrivingController : MonoBehaviour
     {
         Scaler = GetComponent<ScaleReciever>();
         DrivingEmitter.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-        BoostAmount = MaxBoosAmount;
     }
 
     void Update()
@@ -51,6 +46,12 @@ public class DrivingController : MonoBehaviour
         float currentTurnSpeed = TurnSpeed;
         float currentMovementSpeed = MovementSpeed;
         float currentMaxVelocity = MaxVelocity;
+        
+        if (boosting)
+        {
+            currentMaxVelocity = MaxVelocityBoost;
+        }
+        
         var moveDot = math.dot(transform.forward, Rigidbody.linearVelocity.normalized);
 
         isRunning = verticalInput != 0;
@@ -75,17 +76,6 @@ public class DrivingController : MonoBehaviour
             sidewayDrag *= Scaler.SmallSpeedMultiplier;
         }
 
-        if (boosting && BoostAmount > 0f)
-        {
-            currentMovementSpeed *= BoostingMovementSpeedMultiplier;
-            currentMaxVelocity *= BoostingMaxVelocityMultiplier;
-            BoostAmount -= deltaTime;
-        }
-        else if (!boosting)
-        {
-            BoostAmount += deltaTime / BoostRechargeSpeed;
-        }
-
         if (drifting)
         {
             currentTurnSpeed = TurnSpeed * DriftingTurnSpeedMultiplier;
@@ -105,14 +95,19 @@ public class DrivingController : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(rotatedForward.normalized);*/
         
         Vector3 moveVector = rotatedForward * verticalInput * currentMovementSpeed;
-        Rigidbody.linearVelocity += moveVector * deltaTime;
+        if (Rigidbody.linearVelocity.magnitude < currentMaxVelocity)
+        {
+            Rigidbody.linearVelocity += moveVector * deltaTime;
+        }
+        
         Rigidbody.linearVelocity += ((transform.forward * moveDot * Rigidbody.linearVelocity.magnitude) - Rigidbody.linearVelocity) * sidewayDrag * deltaTime;
         var preDragVel = Rigidbody.linearVelocity;
         Rigidbody.linearVelocity -= Rigidbody.linearVelocity.normalized * forwardDrag * deltaTime;
         if (math.dot(preDragVel, Rigidbody.linearVelocity) < 0f)
             Rigidbody.linearVelocity = Vector3.zero;
-        var clampedVelocity = math.clamp(Rigidbody.linearVelocity, -currentMaxVelocity, currentMaxVelocity);
-        Rigidbody.linearVelocity = clampedVelocity;
+        
+        // var clampedVelocity = math.clamp(Rigidbody.linearVelocity, -currentMaxVelocity, currentMaxVelocity);
+        // Rigidbody.linearVelocity = clampedVelocity;
         
         if(Rigidbody.linearVelocity.magnitude > 0.3f)
             transform.rotation = Quaternion.LookRotation(rotatedForward.normalized);
