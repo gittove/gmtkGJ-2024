@@ -57,7 +57,7 @@ MonoBehaviour:
   MovementSpeed: 30
   TurnSpeed: 3
   MinimumTurnSpeedMultiplier: 0.8
-  MaxVelocity: 20
+  MaxVelocity: 50
   Rigidbody: {fileID: 9173743438842922095}
   ForwardDrag: 20
   SidewayDrag: 10
@@ -496,8 +496,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bodySource: {fileID: 9173743438842922095}
   _audio: {fileID: 7935373495986093125}
-  _pitchRange: {x: 0.45, y: 2.7}
-  _cutoffPoints: {x: 1, y: 30}
+  _pitchRange: {x: 0.45, y: 3.3}
+  _cutoffPoints: {x: 1, y: 50}
 --- !u!1 &4742575763613572741
 GameObject:
   m_ObjectHideFlags: 0
