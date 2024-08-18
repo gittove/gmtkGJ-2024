@@ -4,6 +4,12 @@ public class ScaleReciever : MonoBehaviour
 {
     public PlayerScale CurrentScale = PlayerScale.Medium;
     private PlayerScale previousScale;
+
+    public float SmallSpeedMultiplier = 0.5f;
+    public float SmallMaxVelocityMultiplier = 0.5f;
+   
+    public float BigSpeedMultiplier = 1.5f;
+    public float BigMaxVelocityMultiplier = 1.5f; 
     
     void Start()
     {

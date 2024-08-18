@@ -60,6 +60,10 @@ MonoBehaviour:
   DriftForwardDragMultiplier: 1.3
   DriftSidewayDragMultiplier: 0.03
   DriftingTurnSpeedMultiplier: 1.2
+  MaxBoosAmount: 1.5
+  BoostRechargeSpeed: 5
+  BoostingMovementSpeedMultiplier: 2
+  BoostingMaxVelocityMultiplier: 2
   DrivingEmitter: {fileID: 6572406052255396915}
 --- !u!54 &9173743438842922095
 Rigidbody:
@@ -107,8 +111,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.63, y: 1.81, z: 2.26}
-  m_Center: {x: 0, y: 1.05, z: 0}
+  m_Size: {x: 0.81, y: 1.57, z: 2.11}
+  m_Center: {x: 0, y: 0.94, z: -0.11}
 --- !u!114 &2622534057870333894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +126,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentScale: 1
+  SmallSpeedMultiplier: 0.8
+  SmallMaxVelocityMultiplier: 0.5
+  BigSpeedMultiplier: 1.5
+  BigMaxVelocityMultiplier: 1.5
 --- !u!1 &3702863199255914384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5191,7 +5199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c1ee195cbbe42344490f09dbc303d3f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.133
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1ee195cbbe42344490f09dbc303d3f6, type: 3}
       propertyPath: m_LocalPosition.y
