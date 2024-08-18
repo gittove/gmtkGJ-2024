@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Order : MonoBehaviour
 {
+    private HUD playerHUD;
     private float _timer;
     
     [SerializeField] private float _pickupInteractionSeconds = 2f;
@@ -19,8 +20,14 @@ public class Order : MonoBehaviour
         _timer = timer;
     }
 
+    private void Start()
+    {
+        playerHUD = FindFirstObjectByType<HUD>();
+    }
+
     public void Complete()
     {
+        playerHUD.RemoveIndicator(this);
         Destroy(this.gameObject);
     }
 
@@ -49,6 +56,8 @@ public class Order : MonoBehaviour
         _interactionTimer = _pickupInteractionSeconds;
         GetComponent<BoxCollider>().enabled = false;
         _pickupMesh.gameObject.SetActive(false);
+        
+        playerHUD.AddIndicator(this);
     }
     
     void Update()
