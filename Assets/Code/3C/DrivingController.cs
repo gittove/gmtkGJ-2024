@@ -83,7 +83,7 @@ public class DrivingController : MonoBehaviour
             sidewayDrag *= DriftSidewayDragMultiplier;
         }
         
-        var turnAngle = horizontalInput * currentTurnSpeed;
+        var turnAngle = horizontalInput * currentTurnSpeed * moveDot;
         var turnedDirection = Quaternion.AngleAxis(turnAngle, Vector3.up) * transform.forward;
         var desiredDirection = transform.forward + turnedDirection;
         var speedMultiplier = math.unlerp(0f, MaxVelocity, Rigidbody.linearVelocity.magnitude);
