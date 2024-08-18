@@ -27,8 +27,8 @@ public class Snapper : UnityEditor.Editor
                 continue;
             }
             var pos = obj.transform.position;
-            pos.x = Mathf.Round(pos.x / IncrementPos) * IncrementPos;
-            pos.z = Mathf.Round(pos.z / IncrementPos) * IncrementPos;
+            pos.x = Mathf.Round(pos.x / EditorSnapSettings.gridSize.x) * EditorSnapSettings.gridSize.x;
+            pos.z = Mathf.Round(pos.z / EditorSnapSettings.gridSize.x) * EditorSnapSettings.gridSize.x;
             obj.transform.position = pos;
 
             var rotation = obj.transform.rotation.eulerAngles;
@@ -47,9 +47,9 @@ public class Snapper : UnityEditor.Editor
                 continue;
             }
             var pos = obj.transform.position;
-            pos.x = Mathf.Round(pos.x / IncrementPos) * IncrementPos;
+            pos.x = Mathf.Round(pos.x / EditorSnapSettings.gridSize.x) * EditorSnapSettings.gridSize.x;
             pos.y = 0;
-            pos.z = Mathf.Round(pos.z / IncrementPos) * IncrementPos;
+            pos.z = Mathf.Round(pos.z / EditorSnapSettings.gridSize.x) * EditorSnapSettings.gridSize.x;
             obj.transform.position = pos;
 
             var rotation = obj.transform.rotation.eulerAngles;
