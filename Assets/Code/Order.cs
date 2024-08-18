@@ -1,14 +1,21 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 
 public class Order : MonoBehaviour
 {
     private float _timer;
+    
+    [SerializeField] private float _pickupInteractionSeconds = 2f;
+    [SerializeField] private GameObject _pickupMesh;
+
+    private float _interactionTimer;
 
     public float3 Position => gameObject.transform.position;
 
     public void Setup(float timer)
     {
+        _interactionTimer = _pickupInteractionSeconds;
         _timer = timer;
     }
 
@@ -21,18 +28,27 @@ public class Order : MonoBehaviour
     {
         transform.parent = newParent;
         
-        int orderID = gameObject.GetInstanceID();
+        int orderID = this.gameObject.GetInstanceID();
 
         var customers = FindObjectsByType<Customer>(FindObjectsSortMode.None);
         int pickIndex = UnityEngine.Random.Range(0, customers.Length - 1);
-        
+
+        int attempts = 0;
         while (customers[pickIndex].GetComponent<Customer>().Occupied)
         {
             pickIndex = UnityEngine.Random.Range(0, customers.Length - 1);
+            attempts++;
+            if (attempts > 5)
+            {
+                return;
+            }
         }
             
         customers[pickIndex].GetComponent<Customer>().Activate(orderID);
         
+        _interactionTimer = _pickupInteractionSeconds;
+        GetComponent<BoxCollider>().enabled = false;
+        _pickupMesh.gameObject.SetActive(false);
     }
     
     void Update()
@@ -47,12 +63,17 @@ public class Order : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetButtonDown("Interact"))
+        _interactionTimer -= Time.deltaTime;
+        
+        if (_interactionTimer <= 0f)
         {
-            Debug.Log("Picked up order");
-            
             OnPickup(other.gameObject.transform);
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        _interactionTimer = _pickupInteractionSeconds;
     }
 
     private void OnDrawGizmos()
@@ -61,9 +82,12 @@ public class Order : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawSphere(transform.position + transform.up * 1.5f, 0.2f);
-            
-            Gizmos.color = Color.magenta;
-            Gizmos.DrawWireSphere(transform.position + GetComponent<SphereCollider>().center, GetComponent<SphereCollider>().radius);
+
+            if (GetComponent<BoxCollider>().enabled)
+            {
+                Gizmos.color = Color.magenta;
+                Gizmos.DrawWireCube(transform.position + GetComponent<BoxCollider>().center, GetComponent<BoxCollider>().size);
+            }
         }
     }
 }

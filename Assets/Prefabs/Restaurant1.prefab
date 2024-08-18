@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7699912739724238458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4008061300487603428}
+  m_Layer: 0
+  m_Name: OrderSpawnAlign
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4008061300487603428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7699912739724238458}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 0, z: 10.801946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4562861988773523424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3716232276010356803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52,9 +83,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 2900989725153712361, guid: 9afeb204bb19090498c03b754119a31e, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 2421334267658095623, guid: 9afeb204bb19090498c03b754119a31e, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 918803994620084131, guid: 9afeb204bb19090498c03b754119a31e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4008061300487603428}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9afeb204bb19090498c03b754119a31e, type: 3}
 --- !u!4 &4562861988773523424 stripped
@@ -110,6 +146,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4983758159644420029, guid: 20718685d9cccb94e8a5395d3c3a94c1, type: 3}
+      propertyPath: OrderSpawnAlign
+      value: 
+      objectReference: {fileID: 7699912739724238458}
     - target: {fileID: 8617708932411796772, guid: 20718685d9cccb94e8a5395d3c3a94c1, type: 3}
       propertyPath: m_Name
       value: Restaurant1

@@ -1,59 +1,37 @@
-using System;
 using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
     private bool _occupied;
-    [SerializeField] private int OrderID;
+    private DeliverySquare _deliverSquare;
 
+    [SerializeField] private float _deliverInteractionTimeSeconds = 2f;
     public bool Occupied => _occupied;
-    private SphereCollider _collider;
 
     private void Start()
     {
-        _collider = GetComponent<SphereCollider>();
-        _collider.enabled = false;
+        _deliverSquare = GetComponentInChildren<DeliverySquare>();
+        _deliverSquare.gameObject.SetActive(false);
     }
 
     public void Activate(int orderID)
     {
-        OrderID = orderID;
-        _collider.enabled = true;
+        _deliverSquare.gameObject.SetActive(true);
+        _deliverSquare.Setup(orderID, _deliverInteractionTimeSeconds);
+        _deliverSquare.DeliverEvent += OnDeliver;
+        
         _occupied = true;
     }
 
     private void Reset()
     {
-        OrderID = 0;
-        _collider.enabled = false;
+        _deliverSquare.DeliverEvent -= OnDeliver;
+        _deliverSquare.gameObject.SetActive(false);
         _occupied = false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnDeliver()
     {
-        if (Input.GetButtonDown("Interact"))
-        {
-            var carriedOrders = other.gameObject.GetComponentsInChildren<Order>();
-
-            foreach (var order in carriedOrders)
-            {
-                if (order.GetInstanceID() == OrderID)
-                {
-                    Debug.Log("Delivered:)");
-                    order.Complete();
-                    Reset();
-                }
-            }
-            // compare orderIDs
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (_occupied)
-        {
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawWireSphere(transform.position + _collider.center, _collider.radius);
-        }
+        Reset();
     }
 }

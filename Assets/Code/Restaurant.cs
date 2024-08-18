@@ -4,6 +4,7 @@ using UnityEngine;
 public class Restaurant : MonoBehaviour
 {
     public GameObject OrderPrefab;
+    public GameObject OrderSpawnAlign;
     
     private float _weight;
     private float _depletionWeight;
@@ -25,7 +26,7 @@ public class Restaurant : MonoBehaviour
     {
         _depletionWeight = 1f;
 
-        var newOrder = Instantiate(OrderPrefab, transform);
+        var newOrder = Instantiate(OrderPrefab, OrderSpawnAlign.transform);
         newOrder.GetComponent<Order>().Setup(30f);
     }
 
