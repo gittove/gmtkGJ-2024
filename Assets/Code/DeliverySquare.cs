@@ -26,7 +26,7 @@ public class DeliverySquare : MonoBehaviour
 
             foreach (var order in carriedOrders)
             {
-                if (order.gameObject.GetInstanceID() == OrderID)
+                if (order.GetInstanceID() == OrderID)
                 {
                     order.Complete();
                     OrderID = 0;
