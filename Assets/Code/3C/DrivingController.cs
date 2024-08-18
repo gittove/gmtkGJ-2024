@@ -27,7 +27,9 @@ public class DrivingController : MonoBehaviour
     private bool wasRunning;
 
     public UnityEvent<bool> _brakeChanging;
+    public UnityEvent<bool> _driftChange;
     private bool braking;
+    private bool _drift;
 
     private void Start()
     {
@@ -98,6 +100,18 @@ public class DrivingController : MonoBehaviour
             currentTurnSpeed = TurnSpeed * DriftingTurnSpeedMultiplier;
             forwardDrag *= DriftForwardDragMultiplier;
             sidewayDrag *= DriftSidewayDragMultiplier;
+        }
+
+        if (drifting && !_drift)
+        {
+            _drift = true;
+            _driftChange.Invoke(true);
+        }
+        
+        if (!drifting && _drift)
+        {
+            _drift = false;
+            _driftChange.Invoke(false);
         }
         
         var turnAngle = horizontalInput * currentTurnSpeed * moveDot;
