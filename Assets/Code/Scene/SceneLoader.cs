@@ -1,5 +1,8 @@
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [ExecuteInEditMode]
 public class SceneLoader : MonoBehaviour
@@ -11,7 +14,11 @@ public class SceneLoader : MonoBehaviour
     {
         for (int i = 0; i < _scenes.Length; i++)
         {
+#if UNITY_EDITOR
             EditorSceneManager.OpenScene($"Assets/Scenes/{_scenes[i]}.unity", OpenSceneMode.Additive);
+#else
+            SceneManager.LoadScene(_scenes[i], LoadSceneMode.Additive);
+#endif
         }
     }
 }

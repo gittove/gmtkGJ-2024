@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using Unity.Mathematics;
-using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
