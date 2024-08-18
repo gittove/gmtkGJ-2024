@@ -12,7 +12,6 @@ public class DeliverySquare : MonoBehaviour
 
     public void Setup(int orderID, float deliverTimeSeconds)
     {
-        Debug.Log("setup");
         OrderID = orderID;
         _deliverInteractionTimeSeconds = deliverTimeSeconds;
         _interactionTimer = _deliverInteractionTimeSeconds;

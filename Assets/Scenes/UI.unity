@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1eb1dbca56a8a94e993a998692120ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  MainCamera: {fileID: 0}
   ScoreText: {fileID: 1482350298}
   GameTimerText: {fileID: 433474281}
   GameTime: 5
@@ -1073,7 +1073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2030401726
 MonoBehaviour:
   m_ObjectHideFlags: 0
