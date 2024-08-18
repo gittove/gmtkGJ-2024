@@ -1,16 +1,32 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ImpactTracker : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _smallHit;
-    [SerializeField] private float _smallHitThreshold;
+    [SerializeField] private Vector3 _thresholds;
+
+    [SerializeField] private UnityEvent _smallImpact;
+    [SerializeField] private UnityEvent _mediumImpact;
+    [SerializeField] private UnityEvent _bigImpact;
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.relativeVelocity.magnitude > _smallHitThreshold)
-        { 
-            _smallHit.Play();
+        var mag = other.relativeVelocity.magnitude; 
+        if (mag > _thresholds.z)
+        {
+            _bigImpact.Invoke();
+            _mediumImpact.Invoke();
+            _smallImpact.Invoke();
+        }
+        else if (mag > _thresholds.y)
+        {
+            _mediumImpact.Invoke();
+            _smallImpact.Invoke();
+        }
+        else if (mag > _thresholds.x)
+        {
+            _smallImpact.Invoke();
         }
     }
 }
