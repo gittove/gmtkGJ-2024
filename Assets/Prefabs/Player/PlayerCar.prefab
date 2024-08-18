@@ -130,8 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentScale: 1
   CanScale: 1
-  SmallSpeedMultiplier: 0.8
-  SmallMaxVelocityMultiplier: 0.5
+  SmallSpeedMultiplier: 0.6
+  SmallMaxVelocityMultiplier: 0.3
   BigSpeedMultiplier: 1.5
   BigMaxVelocityMultiplier: 1.5
 --- !u!114 &7438002498263014291

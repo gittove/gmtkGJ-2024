@@ -20,7 +20,7 @@ public class ScaleReciever : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q) && CanScale)
+        if (Input.GetKeyDown(KeyCode.Q) && CanScale)
         {
             if (CurrentScale == PlayerScale.Medium)
                 CurrentScale = PlayerScale.Small;
