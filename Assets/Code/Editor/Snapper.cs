@@ -6,7 +6,7 @@ using UnityEngine;
 [CustomEditor(typeof(SnapMarker))]
 public class Snapper : UnityEditor.Editor
 {
-    private static float IncrementPos = 5f;
+    private static float IncrementPos = 2.5f;
     private static float IncrementRotation = 90;
 
     private SerializedObject _this;
@@ -27,8 +27,8 @@ public class Snapper : UnityEditor.Editor
                 continue;
             }
             var pos = obj.transform.position;
-            pos.x = Mathf.Round(pos.x / EditorSnapSettings.gridSize.x) * EditorSnapSettings.gridSize.x;
-            pos.z = Mathf.Round(pos.z / EditorSnapSettings.gridSize.x) * EditorSnapSettings.gridSize.x;
+            pos.x = Mathf.Round(pos.x / IncrementPos) * IncrementPos;
+            pos.z = Mathf.Round(pos.z / IncrementPos) * IncrementPos;
             obj.transform.position = pos;
 
             var rotation = obj.transform.rotation.eulerAngles;
@@ -47,9 +47,9 @@ public class Snapper : UnityEditor.Editor
                 continue;
             }
             var pos = obj.transform.position;
-            pos.x = Mathf.Round(pos.x / EditorSnapSettings.gridSize.x) * EditorSnapSettings.gridSize.x;
+            pos.x = Mathf.Round(pos.x / IncrementPos) * IncrementPos;
             pos.y = 0;
-            pos.z = Mathf.Round(pos.z / EditorSnapSettings.gridSize.x) * EditorSnapSettings.gridSize.x;
+            pos.z = Mathf.Round(pos.z / IncrementPos) * IncrementPos;
             obj.transform.position = pos;
 
             var rotation = obj.transform.rotation.eulerAngles;
