@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Customer Variant 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1884309955021675563, guid: 5c4e67c0179939540bb2d79d8fe75135, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364082995697852493, guid: 5c4e67c0179939540bb2d79d8fe75135, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5249691405374023746, guid: 5c4e67c0179939540bb2d79d8fe75135, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
