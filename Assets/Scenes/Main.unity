@@ -783,7 +783,6 @@ GameObject:
   - component: {fileID: 54696807}
   - component: {fileID: 54696811}
   - component: {fileID: 54696810}
-  - component: {fileID: 54696809}
   - component: {fileID: 54696808}
   m_Layer: 8
   m_Name: house
@@ -801,7 +800,7 @@ Transform:
   m_GameObject: {fileID: 54696806}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.29999924, y: 0, z: -0.19999695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -823,19 +822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &54696809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54696806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &54696810
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -958,7 +944,6 @@ GameObject:
   - component: {fileID: 66697202}
   - component: {fileID: 66697206}
   - component: {fileID: 66697205}
-  - component: {fileID: 66697204}
   - component: {fileID: 66697203}
   m_Layer: 8
   m_Name: house
@@ -976,7 +961,7 @@ Transform:
   m_GameObject: {fileID: 66697201}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.7099991, y: 0, z: 0.00000006207009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -998,19 +983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &66697204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66697201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &66697205
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1911,7 +1883,6 @@ GameObject:
   - component: {fileID: 106537868}
   - component: {fileID: 106537872}
   - component: {fileID: 106537871}
-  - component: {fileID: 106537870}
   - component: {fileID: 106537869}
   m_Layer: 8
   m_Name: house
@@ -1929,7 +1900,7 @@ Transform:
   m_GameObject: {fileID: 106537867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.69999695, y: 0, z: 0.00000006119568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1951,19 +1922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &106537870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106537867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &106537871
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2829,7 +2787,6 @@ GameObject:
   - component: {fileID: 141082176}
   - component: {fileID: 141082180}
   - component: {fileID: 141082179}
-  - component: {fileID: 141082178}
   - component: {fileID: 141082177}
   m_Layer: 8
   m_Name: house
@@ -2869,19 +2826,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &141082178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141082175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &141082179
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3126,7 +3070,6 @@ GameObject:
   - component: {fileID: 152014110}
   - component: {fileID: 152014114}
   - component: {fileID: 152014113}
-  - component: {fileID: 152014112}
   - component: {fileID: 152014111}
   m_Layer: 8
   m_Name: house
@@ -3166,19 +3109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &152014112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152014109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &152014113
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3762,7 +3692,6 @@ GameObject:
   - component: {fileID: 200356921}
   - component: {fileID: 200356925}
   - component: {fileID: 200356924}
-  - component: {fileID: 200356923}
   - component: {fileID: 200356922}
   m_Layer: 8
   m_Name: house
@@ -3780,7 +3709,7 @@ Transform:
   m_GameObject: {fileID: 200356920}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3802,19 +3731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &200356923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200356920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &200356924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3884,7 +3800,6 @@ GameObject:
   - component: {fileID: 201475005}
   - component: {fileID: 201475009}
   - component: {fileID: 201475008}
-  - component: {fileID: 201475007}
   - component: {fileID: 201475006}
   m_Layer: 8
   m_Name: house
@@ -3924,19 +3839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &201475007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201475004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &201475008
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4334,7 +4236,6 @@ GameObject:
   - component: {fileID: 215548324}
   - component: {fileID: 215548328}
   - component: {fileID: 215548327}
-  - component: {fileID: 215548326}
   - component: {fileID: 215548325}
   m_Layer: 8
   m_Name: house
@@ -4374,19 +4275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &215548326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215548323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &215548327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4967,7 +4855,6 @@ GameObject:
   - component: {fileID: 249331464}
   - component: {fileID: 249331468}
   - component: {fileID: 249331467}
-  - component: {fileID: 249331466}
   - component: {fileID: 249331465}
   m_Layer: 8
   m_Name: house
@@ -5007,19 +4894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &249331466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249331463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &249331467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5246,7 +5120,6 @@ GameObject:
   - component: {fileID: 259847123}
   - component: {fileID: 259847127}
   - component: {fileID: 259847126}
-  - component: {fileID: 259847125}
   - component: {fileID: 259847124}
   m_Layer: 8
   m_Name: house
@@ -5286,19 +5159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &259847125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 259847122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &259847126
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6195,7 +6055,6 @@ GameObject:
   - component: {fileID: 295158738}
   - component: {fileID: 295158742}
   - component: {fileID: 295158741}
-  - component: {fileID: 295158740}
   - component: {fileID: 295158739}
   m_Layer: 8
   m_Name: house
@@ -6213,7 +6072,7 @@ Transform:
   m_GameObject: {fileID: 295158737}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6235,19 +6094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &295158740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295158737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &295158741
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6591,7 +6437,6 @@ GameObject:
   - component: {fileID: 317281418}
   - component: {fileID: 317281422}
   - component: {fileID: 317281421}
-  - component: {fileID: 317281420}
   - component: {fileID: 317281419}
   m_Layer: 8
   m_Name: house
@@ -6609,7 +6454,7 @@ Transform:
   m_GameObject: {fileID: 317281417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6631,19 +6476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &317281420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317281417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &317281421
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6713,7 +6545,6 @@ GameObject:
   - component: {fileID: 319244988}
   - component: {fileID: 319244992}
   - component: {fileID: 319244991}
-  - component: {fileID: 319244990}
   - component: {fileID: 319244989}
   m_Layer: 8
   m_Name: house
@@ -6731,7 +6562,7 @@ Transform:
   m_GameObject: {fileID: 319244987}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6753,19 +6584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &319244990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319244987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &319244991
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6888,7 +6706,6 @@ GameObject:
   - component: {fileID: 323728174}
   - component: {fileID: 323728178}
   - component: {fileID: 323728177}
-  - component: {fileID: 323728176}
   - component: {fileID: 323728175}
   m_Layer: 8
   m_Name: house
@@ -6906,7 +6723,7 @@ Transform:
   m_GameObject: {fileID: 323728173}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6928,19 +6745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &323728176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323728173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &323728177
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7529,7 +7333,6 @@ GameObject:
   - component: {fileID: 354623049}
   - component: {fileID: 354623053}
   - component: {fileID: 354623052}
-  - component: {fileID: 354623051}
   - component: {fileID: 354623050}
   m_Layer: 8
   m_Name: house
@@ -7569,19 +7372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &354623051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354623048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &354623052
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7826,7 +7616,6 @@ GameObject:
   - component: {fileID: 365611815}
   - component: {fileID: 365611819}
   - component: {fileID: 365611818}
-  - component: {fileID: 365611817}
   - component: {fileID: 365611816}
   m_Layer: 8
   m_Name: house
@@ -7844,7 +7633,7 @@ Transform:
   m_GameObject: {fileID: 365611814}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.50000006, y: 0, z: -0.49999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7866,19 +7655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &365611817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365611814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &365611818
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8665,7 +8441,6 @@ GameObject:
   - component: {fileID: 428190180}
   - component: {fileID: 428190184}
   - component: {fileID: 428190183}
-  - component: {fileID: 428190182}
   - component: {fileID: 428190181}
   m_Layer: 8
   m_Name: house
@@ -8705,19 +8480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &428190182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428190179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &428190183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9231,7 +8993,6 @@ GameObject:
   - component: {fileID: 438154883}
   - component: {fileID: 438154887}
   - component: {fileID: 438154886}
-  - component: {fileID: 438154885}
   - component: {fileID: 438154884}
   m_Layer: 8
   m_Name: house
@@ -9249,7 +9010,7 @@ Transform:
   m_GameObject: {fileID: 438154882}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9271,19 +9032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &438154885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438154882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &438154886
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9353,7 +9101,6 @@ GameObject:
   - component: {fileID: 439817723}
   - component: {fileID: 439817727}
   - component: {fileID: 439817726}
-  - component: {fileID: 439817725}
   - component: {fileID: 439817724}
   m_Layer: 8
   m_Name: house
@@ -9393,19 +9140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &439817725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439817722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &439817726
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9590,7 +9324,6 @@ GameObject:
   - component: {fileID: 449360714}
   - component: {fileID: 449360718}
   - component: {fileID: 449360717}
-  - component: {fileID: 449360716}
   - component: {fileID: 449360715}
   m_Layer: 8
   m_Name: house
@@ -9608,7 +9341,7 @@ Transform:
   m_GameObject: {fileID: 449360713}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000000059604645, y: 0, z: -0.6899987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9630,19 +9363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &449360716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449360713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &449360717
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9765,7 +9485,6 @@ GameObject:
   - component: {fileID: 462758836}
   - component: {fileID: 462758840}
   - component: {fileID: 462758839}
-  - component: {fileID: 462758838}
   - component: {fileID: 462758837}
   m_Layer: 8
   m_Name: house
@@ -9783,7 +9502,7 @@ Transform:
   m_GameObject: {fileID: 462758835}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9805,19 +9524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &462758838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462758835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &462758839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10115,7 +9821,6 @@ GameObject:
   - component: {fileID: 478105372}
   - component: {fileID: 478105376}
   - component: {fileID: 478105375}
-  - component: {fileID: 478105374}
   - component: {fileID: 478105373}
   m_Layer: 8
   m_Name: house
@@ -10155,19 +9860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &478105374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 478105371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &478105375
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10739,7 +10431,6 @@ GameObject:
   - component: {fileID: 522069969}
   - component: {fileID: 522069973}
   - component: {fileID: 522069972}
-  - component: {fileID: 522069971}
   - component: {fileID: 522069970}
   m_Layer: 8
   m_Name: house
@@ -10757,7 +10448,7 @@ Transform:
   m_GameObject: {fileID: 522069968}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10779,19 +10470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &522069971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522069968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &522069972
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11098,7 +10776,6 @@ GameObject:
   - component: {fileID: 530150664}
   - component: {fileID: 530150668}
   - component: {fileID: 530150667}
-  - component: {fileID: 530150666}
   - component: {fileID: 530150665}
   m_Layer: 8
   m_Name: house
@@ -11116,7 +10793,7 @@ Transform:
   m_GameObject: {fileID: 530150663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11138,19 +10815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &530150666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 530150663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &530150667
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12191,7 +11855,6 @@ GameObject:
   - component: {fileID: 599433968}
   - component: {fileID: 599433972}
   - component: {fileID: 599433971}
-  - component: {fileID: 599433970}
   - component: {fileID: 599433969}
   m_Layer: 8
   m_Name: house
@@ -12231,19 +11894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &599433970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599433967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &599433971
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12884,7 +12534,6 @@ GameObject:
   - component: {fileID: 637955066}
   - component: {fileID: 637955070}
   - component: {fileID: 637955069}
-  - component: {fileID: 637955068}
   - component: {fileID: 637955067}
   m_Layer: 8
   m_Name: house
@@ -12924,19 +12573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &637955068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637955065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &637955069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13392,7 +13028,6 @@ GameObject:
   - component: {fileID: 671916953}
   - component: {fileID: 671916957}
   - component: {fileID: 671916956}
-  - component: {fileID: 671916955}
   - component: {fileID: 671916954}
   m_Layer: 8
   m_Name: house
@@ -13410,7 +13045,7 @@ Transform:
   m_GameObject: {fileID: 671916952}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13432,19 +13067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &671916955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671916952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &671916956
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13689,7 +13311,6 @@ GameObject:
   - component: {fileID: 680624934}
   - component: {fileID: 680624938}
   - component: {fileID: 680624937}
-  - component: {fileID: 680624936}
   - component: {fileID: 680624935}
   m_Layer: 8
   m_Name: house
@@ -13707,7 +13328,7 @@ Transform:
   m_GameObject: {fileID: 680624933}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13729,19 +13350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &680624936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 680624933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &680624937
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14023,7 +13631,6 @@ GameObject:
   - component: {fileID: 689190651}
   - component: {fileID: 689190655}
   - component: {fileID: 689190654}
-  - component: {fileID: 689190653}
   - component: {fileID: 689190652}
   m_Layer: 8
   m_Name: house
@@ -14041,7 +13648,7 @@ Transform:
   m_GameObject: {fileID: 689190650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.16000366, y: 0, z: -0.44999695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14063,19 +13670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &689190653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689190650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &689190654
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14547,7 +14141,6 @@ GameObject:
   - component: {fileID: 702654441}
   - component: {fileID: 702654445}
   - component: {fileID: 702654444}
-  - component: {fileID: 702654443}
   - component: {fileID: 702654442}
   m_Layer: 8
   m_Name: house
@@ -14565,7 +14158,7 @@ Transform:
   m_GameObject: {fileID: 702654440}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14587,19 +14180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &702654443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702654440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &702654444
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14722,7 +14302,6 @@ GameObject:
   - component: {fileID: 707628424}
   - component: {fileID: 707628428}
   - component: {fileID: 707628427}
-  - component: {fileID: 707628426}
   - component: {fileID: 707628425}
   m_Layer: 8
   m_Name: house
@@ -14762,19 +14341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &707628426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707628423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &707628427
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15256,7 +14822,6 @@ GameObject:
   - component: {fileID: 730026985}
   - component: {fileID: 730026989}
   - component: {fileID: 730026988}
-  - component: {fileID: 730026987}
   - component: {fileID: 730026986}
   m_Layer: 8
   m_Name: house
@@ -15274,7 +14839,7 @@ Transform:
   m_GameObject: {fileID: 730026984}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5599977, y: 0, z: -0.49999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15296,19 +14861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &730026987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730026984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &730026988
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15862,7 +15414,6 @@ GameObject:
   - component: {fileID: 748885646}
   - component: {fileID: 748885650}
   - component: {fileID: 748885649}
-  - component: {fileID: 748885648}
   - component: {fileID: 748885647}
   m_Layer: 8
   m_Name: house
@@ -15902,19 +15453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &748885648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748885645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &748885649
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17106,7 +16644,6 @@ GameObject:
   - component: {fileID: 822400778}
   - component: {fileID: 822400782}
   - component: {fileID: 822400781}
-  - component: {fileID: 822400780}
   - component: {fileID: 822400779}
   m_Layer: 8
   m_Name: house
@@ -17146,19 +16683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &822400780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822400777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &822400781
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17930,7 +17454,6 @@ GameObject:
   - component: {fileID: 854553952}
   - component: {fileID: 854553956}
   - component: {fileID: 854553955}
-  - component: {fileID: 854553954}
   - component: {fileID: 854553953}
   m_Layer: 8
   m_Name: house
@@ -17970,19 +17493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &854553954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854553951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &854553955
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18105,7 +17615,6 @@ GameObject:
   - component: {fileID: 857899244}
   - component: {fileID: 857899248}
   - component: {fileID: 857899247}
-  - component: {fileID: 857899246}
   - component: {fileID: 857899245}
   m_Layer: 8
   m_Name: house
@@ -18145,19 +17654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &857899246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857899243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &857899247
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18227,7 +17723,6 @@ GameObject:
   - component: {fileID: 863766865}
   - component: {fileID: 863766869}
   - component: {fileID: 863766868}
-  - component: {fileID: 863766867}
   - component: {fileID: 863766866}
   m_Layer: 8
   m_Name: house
@@ -18267,19 +17762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &863766867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863766864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &863766868
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18623,7 +18105,6 @@ GameObject:
   - component: {fileID: 898751466}
   - component: {fileID: 898751470}
   - component: {fileID: 898751469}
-  - component: {fileID: 898751468}
   - component: {fileID: 898751467}
   m_Layer: 8
   m_Name: house
@@ -18641,7 +18122,7 @@ Transform:
   m_GameObject: {fileID: 898751465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18663,19 +18144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &898751468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898751465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &898751469
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19775,7 +19243,6 @@ GameObject:
   - component: {fileID: 919887073}
   - component: {fileID: 919887077}
   - component: {fileID: 919887076}
-  - component: {fileID: 919887075}
   - component: {fileID: 919887074}
   m_Layer: 8
   m_Name: house
@@ -19793,7 +19260,7 @@ Transform:
   m_GameObject: {fileID: 919887072}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.90000147, y: 0, z: -0.699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19815,19 +19282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &919887075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919887072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &919887076
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20456,7 +19910,6 @@ GameObject:
   - component: {fileID: 939930054}
   - component: {fileID: 939930058}
   - component: {fileID: 939930057}
-  - component: {fileID: 939930056}
   - component: {fileID: 939930055}
   m_Layer: 8
   m_Name: house
@@ -20474,7 +19927,7 @@ Transform:
   m_GameObject: {fileID: 939930053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.30000305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20496,19 +19949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &939930056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939930053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &939930057
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20631,7 +20071,6 @@ GameObject:
   - component: {fileID: 944187422}
   - component: {fileID: 944187426}
   - component: {fileID: 944187425}
-  - component: {fileID: 944187424}
   - component: {fileID: 944187423}
   m_Layer: 8
   m_Name: house
@@ -20671,19 +20110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &944187424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944187421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &944187425
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20868,7 +20294,6 @@ GameObject:
   - component: {fileID: 951835250}
   - component: {fileID: 951835254}
   - component: {fileID: 951835253}
-  - component: {fileID: 951835252}
   - component: {fileID: 951835251}
   m_Layer: 8
   m_Name: house
@@ -20886,7 +20311,7 @@ Transform:
   m_GameObject: {fileID: 951835249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20908,19 +20333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &951835252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951835249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &951835253
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21112,7 +20524,6 @@ GameObject:
   - component: {fileID: 955387315}
   - component: {fileID: 955387319}
   - component: {fileID: 955387318}
-  - component: {fileID: 955387317}
   - component: {fileID: 955387316}
   m_Layer: 8
   m_Name: house
@@ -21130,7 +20541,7 @@ Transform:
   m_GameObject: {fileID: 955387314}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5000001, y: 0, z: -0.49999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21152,19 +20563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &955387317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955387314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &955387318
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21402,7 +20800,6 @@ GameObject:
   - component: {fileID: 964372334}
   - component: {fileID: 964372338}
   - component: {fileID: 964372337}
-  - component: {fileID: 964372336}
   - component: {fileID: 964372335}
   m_Layer: 8
   m_Name: house
@@ -21420,7 +20817,7 @@ Transform:
   m_GameObject: {fileID: 964372333}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.50000006, y: 0, z: -0.49999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21442,19 +20839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &964372336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964372333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &964372337
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22014,7 +21398,6 @@ GameObject:
   - component: {fileID: 989199723}
   - component: {fileID: 989199727}
   - component: {fileID: 989199726}
-  - component: {fileID: 989199725}
   - component: {fileID: 989199724}
   m_Layer: 8
   m_Name: house
@@ -22032,7 +21415,7 @@ Transform:
   m_GameObject: {fileID: 989199722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22054,19 +21437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &989199725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989199722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &989199726
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22433,7 +21803,6 @@ GameObject:
   - component: {fileID: 999490056}
   - component: {fileID: 999490060}
   - component: {fileID: 999490059}
-  - component: {fileID: 999490058}
   - component: {fileID: 999490057}
   m_Layer: 8
   m_Name: house
@@ -22473,19 +21842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &999490058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999490055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &999490059
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23516,7 +22872,6 @@ GameObject:
   - component: {fileID: 1058992154}
   - component: {fileID: 1058992158}
   - component: {fileID: 1058992157}
-  - component: {fileID: 1058992156}
   - component: {fileID: 1058992155}
   m_Layer: 8
   m_Name: house
@@ -23534,7 +22889,7 @@ Transform:
   m_GameObject: {fileID: 1058992153}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.69999695, y: 0, z: 0.00000006119568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23556,19 +22911,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1058992156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058992153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1058992157
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24140,7 +23482,6 @@ GameObject:
   - component: {fileID: 1081335227}
   - component: {fileID: 1081335231}
   - component: {fileID: 1081335230}
-  - component: {fileID: 1081335229}
   - component: {fileID: 1081335228}
   m_Layer: 8
   m_Name: house
@@ -24158,7 +23499,7 @@ Transform:
   m_GameObject: {fileID: 1081335226}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.69999695, y: 0, z: 0.00000006119568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24180,19 +23521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1081335229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081335226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1081335230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24623,7 +23951,6 @@ GameObject:
   - component: {fileID: 1117922622}
   - component: {fileID: 1117922626}
   - component: {fileID: 1117922625}
-  - component: {fileID: 1117922624}
   - component: {fileID: 1117922623}
   m_Layer: 8
   m_Name: house
@@ -24641,7 +23968,7 @@ Transform:
   m_GameObject: {fileID: 1117922621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24663,19 +23990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1117922624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117922621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1117922625
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26450,7 +25764,6 @@ GameObject:
   - component: {fileID: 1198538757}
   - component: {fileID: 1198538761}
   - component: {fileID: 1198538760}
-  - component: {fileID: 1198538759}
   - component: {fileID: 1198538758}
   m_Layer: 8
   m_Name: house
@@ -26490,19 +25803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1198538759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198538756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1198538760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26572,7 +25872,6 @@ GameObject:
   - component: {fileID: 1201254680}
   - component: {fileID: 1201254684}
   - component: {fileID: 1201254683}
-  - component: {fileID: 1201254682}
   - component: {fileID: 1201254681}
   m_Layer: 8
   m_Name: house
@@ -26590,7 +25889,7 @@ Transform:
   m_GameObject: {fileID: 1201254679}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.50000006, y: 0, z: -0.49999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26612,19 +25911,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1201254682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201254679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1201254683
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28907,7 +28193,6 @@ GameObject:
   - component: {fileID: 1326589194}
   - component: {fileID: 1326589198}
   - component: {fileID: 1326589197}
-  - component: {fileID: 1326589196}
   - component: {fileID: 1326589195}
   m_Layer: 8
   m_Name: house
@@ -28947,19 +28232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1326589196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326589193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1326589197
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29528,7 +28800,6 @@ GameObject:
   - component: {fileID: 1356628585}
   - component: {fileID: 1356628589}
   - component: {fileID: 1356628588}
-  - component: {fileID: 1356628587}
   - component: {fileID: 1356628586}
   m_Layer: 8
   m_Name: house
@@ -29546,7 +28817,7 @@ Transform:
   m_GameObject: {fileID: 1356628584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.000000059604645, y: 0, z: -0.47000128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29568,19 +28839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1356628587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356628584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1356628588
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31047,7 +30305,6 @@ GameObject:
   - component: {fileID: 1438907685}
   - component: {fileID: 1438907689}
   - component: {fileID: 1438907688}
-  - component: {fileID: 1438907687}
   - component: {fileID: 1438907686}
   m_Layer: 8
   m_Name: house
@@ -31065,7 +30322,7 @@ Transform:
   m_GameObject: {fileID: 1438907684}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.80000323, y: 0, z: -0.49999988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31087,19 +30344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1438907687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438907684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1438907688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31384,7 +30628,6 @@ GameObject:
   - component: {fileID: 1463620782}
   - component: {fileID: 1463620786}
   - component: {fileID: 1463620785}
-  - component: {fileID: 1463620784}
   - component: {fileID: 1463620783}
   m_Layer: 8
   m_Name: house
@@ -31424,19 +30667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1463620784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463620781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1463620785
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32794,7 +32024,6 @@ GameObject:
   - component: {fileID: 1555234758}
   - component: {fileID: 1555234762}
   - component: {fileID: 1555234761}
-  - component: {fileID: 1555234760}
   - component: {fileID: 1555234759}
   m_Layer: 8
   m_Name: house
@@ -32834,19 +32063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1555234760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555234757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1555234761
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33063,7 +32279,6 @@ GameObject:
   - component: {fileID: 1563495776}
   - component: {fileID: 1563495780}
   - component: {fileID: 1563495779}
-  - component: {fileID: 1563495778}
   - component: {fileID: 1563495777}
   m_Layer: 8
   m_Name: house
@@ -33103,19 +32318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1563495778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563495775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1563495779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33238,7 +32440,6 @@ GameObject:
   - component: {fileID: 1569896485}
   - component: {fileID: 1569896489}
   - component: {fileID: 1569896488}
-  - component: {fileID: 1569896487}
   - component: {fileID: 1569896486}
   m_Layer: 8
   m_Name: house
@@ -33278,19 +32479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1569896487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569896484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1569896488
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33569,7 +32757,6 @@ GameObject:
   - component: {fileID: 1586542979}
   - component: {fileID: 1586542983}
   - component: {fileID: 1586542982}
-  - component: {fileID: 1586542981}
   - component: {fileID: 1586542980}
   m_Layer: 8
   m_Name: house
@@ -33609,19 +32796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1586542981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586542978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1586542982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33897,7 +33071,6 @@ GameObject:
   - component: {fileID: 1599601319}
   - component: {fileID: 1599601323}
   - component: {fileID: 1599601322}
-  - component: {fileID: 1599601321}
   - component: {fileID: 1599601320}
   m_Layer: 8
   m_Name: house
@@ -33915,7 +33088,7 @@ Transform:
   m_GameObject: {fileID: 1599601318}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33937,19 +33110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1599601321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599601318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1599601322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34119,7 +33279,6 @@ GameObject:
   - component: {fileID: 1610939396}
   - component: {fileID: 1610939400}
   - component: {fileID: 1610939399}
-  - component: {fileID: 1610939398}
   - component: {fileID: 1610939397}
   m_Layer: 8
   m_Name: house
@@ -34137,7 +33296,7 @@ Transform:
   m_GameObject: {fileID: 1610939395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.2599945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34159,19 +33318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1610939398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610939395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1610939399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35939,7 +35085,6 @@ GameObject:
   - component: {fileID: 1704106274}
   - component: {fileID: 1704106278}
   - component: {fileID: 1704106277}
-  - component: {fileID: 1704106276}
   - component: {fileID: 1704106275}
   m_Layer: 8
   m_Name: house
@@ -35956,7 +35101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704106273}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.00000008742278, z: -0, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35979,19 +35124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1704106276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704106273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1704106277
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36787,7 +35919,6 @@ GameObject:
   - component: {fileID: 1746412176}
   - component: {fileID: 1746412180}
   - component: {fileID: 1746412179}
-  - component: {fileID: 1746412178}
   - component: {fileID: 1746412177}
   m_Layer: 8
   m_Name: house
@@ -36827,19 +35958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1746412178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746412175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1746412179
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37458,7 +36576,6 @@ GameObject:
   - component: {fileID: 1784212323}
   - component: {fileID: 1784212327}
   - component: {fileID: 1784212326}
-  - component: {fileID: 1784212325}
   - component: {fileID: 1784212324}
   m_Layer: 8
   m_Name: house
@@ -37476,7 +36593,7 @@ Transform:
   m_GameObject: {fileID: 1784212322}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.80000323, y: 0, z: -0.49999988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37498,19 +36615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1784212325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784212322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1784212326
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38507,7 +37611,6 @@ GameObject:
   - component: {fileID: 1831424336}
   - component: {fileID: 1831424340}
   - component: {fileID: 1831424339}
-  - component: {fileID: 1831424338}
   - component: {fileID: 1831424337}
   m_Layer: 8
   m_Name: house
@@ -38525,7 +37628,7 @@ Transform:
   m_GameObject: {fileID: 1831424335}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38547,19 +37650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1831424338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831424335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1831424339
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38629,7 +37719,6 @@ GameObject:
   - component: {fileID: 1842487849}
   - component: {fileID: 1842487853}
   - component: {fileID: 1842487852}
-  - component: {fileID: 1842487851}
   - component: {fileID: 1842487850}
   m_Layer: 8
   m_Name: house
@@ -38669,19 +37758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1842487851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842487848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1842487852
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39400,7 +38476,6 @@ GameObject:
   - component: {fileID: 1887545450}
   - component: {fileID: 1887545454}
   - component: {fileID: 1887545453}
-  - component: {fileID: 1887545452}
   - component: {fileID: 1887545451}
   m_Layer: 8
   m_Name: house
@@ -39418,7 +38493,7 @@ Transform:
   m_GameObject: {fileID: 1887545449}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.099998474, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39440,19 +38515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1887545452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887545449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1887545453
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39637,7 +38699,6 @@ GameObject:
   - component: {fileID: 1909591743}
   - component: {fileID: 1909591747}
   - component: {fileID: 1909591746}
-  - component: {fileID: 1909591745}
   - component: {fileID: 1909591744}
   m_Layer: 8
   m_Name: house
@@ -39655,7 +38716,7 @@ Transform:
   m_GameObject: {fileID: 1909591742}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39677,19 +38738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1909591745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909591742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1909591746
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39865,7 +38913,6 @@ GameObject:
   - component: {fileID: 1918400157}
   - component: {fileID: 1918400161}
   - component: {fileID: 1918400160}
-  - component: {fileID: 1918400159}
   - component: {fileID: 1918400158}
   m_Layer: 8
   m_Name: house
@@ -39905,19 +38952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1918400159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918400156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &1918400160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42100,7 +41134,6 @@ GameObject:
   - component: {fileID: 2050488890}
   - component: {fileID: 2050488894}
   - component: {fileID: 2050488893}
-  - component: {fileID: 2050488892}
   - component: {fileID: 2050488891}
   m_Layer: 8
   m_Name: house
@@ -42140,19 +41173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2050488892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050488889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &2050488893
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42328,7 +41348,6 @@ GameObject:
   - component: {fileID: 2059215446}
   - component: {fileID: 2059215450}
   - component: {fileID: 2059215449}
-  - component: {fileID: 2059215448}
   - component: {fileID: 2059215447}
   m_Layer: 8
   m_Name: house
@@ -42368,19 +41387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2059215448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059215445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &2059215449
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43207,7 +42213,6 @@ GameObject:
   - component: {fileID: 2094380354}
   - component: {fileID: 2094380358}
   - component: {fileID: 2094380357}
-  - component: {fileID: 2094380356}
   - component: {fileID: 2094380355}
   m_Layer: 8
   m_Name: house
@@ -43247,19 +42252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2094380356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094380353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &2094380357
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43757,7 +42749,6 @@ GameObject:
   - component: {fileID: 2119418092}
   - component: {fileID: 2119418096}
   - component: {fileID: 2119418095}
-  - component: {fileID: 2119418094}
   - component: {fileID: 2119418093}
   m_Layer: 8
   m_Name: house
@@ -43775,7 +42766,7 @@ Transform:
   m_GameObject: {fileID: 2119418091}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43797,19 +42788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2119418094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119418091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &2119418095
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44259,7 +43237,6 @@ GameObject:
   - component: {fileID: 2145690550}
   - component: {fileID: 2145690554}
   - component: {fileID: 2145690553}
-  - component: {fileID: 2145690552}
   - component: {fileID: 2145690551}
   m_Layer: 8
   m_Name: house
@@ -44277,7 +43254,7 @@ Transform:
   m_GameObject: {fileID: 2145690549}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000000059604645, y: 0, z: -0.50000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44299,19 +43276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457acadd34248f94d966c0804efc1cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2145690552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145690549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f18f6211cc36714884f6e8f9e9e87c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _deliverInteractionTimeSeconds: 2
 --- !u!23 &2145690553
 MeshRenderer:
   m_ObjectHideFlags: 0
