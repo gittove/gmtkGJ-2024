@@ -4,6 +4,7 @@ public class ScaleReciever : MonoBehaviour
 {
     public PlayerScale CurrentScale = PlayerScale.Medium;
     private PlayerScale previousScale;
+    public bool CanScale = true;
 
     public float SmallSpeedMultiplier = 0.5f;
     public float SmallMaxVelocityMultiplier = 0.5f;
@@ -19,7 +20,7 @@ public class ScaleReciever : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q) && CanScale)
         {
             if (CurrentScale == PlayerScale.Medium)
                 CurrentScale = PlayerScale.Small;
