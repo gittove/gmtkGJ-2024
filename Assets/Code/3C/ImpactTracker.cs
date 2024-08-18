@@ -39,10 +39,8 @@ public class ImpactTracker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Collided with layer: {other.gameObject.layer}, looking for {LayerMask.NameToLayer("Shortcut")}");
         if (other.gameObject.layer == LayerMask.NameToLayer("Shortcut"))
         {
-            Debug.Log($"Entered shortcut");
             _scaler.CanScale = false;
         }
     }
@@ -51,7 +49,6 @@ public class ImpactTracker : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Shortcut"))
         {
-            Debug.Log($"Exited shortcut");
             _scaler.CanScale = true;
         } 
         

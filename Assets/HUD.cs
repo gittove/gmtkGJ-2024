@@ -88,14 +88,12 @@ public class HUD : MonoBehaviour
             }
             var deliveryDirection = deliveryPos - Player.gameObject.transform.position;
             var depth = Vector3.Dot(deliveryPos - MainCamera.transform.position, MainCamera.transform.forward);
-            Debug.Log($"Depth: {depth}");
             var deliveryScreenPos = MainCamera.WorldToScreenPoint(deliveryPos);
             if (depth < 0)
             {
                 deliveryScreenPos.x = screenRect.rect.width - deliveryScreenPos.x;
                 deliveryScreenPos.y = screenRect.rect.height - deliveryScreenPos.y;
             }
-            Debug.Log($"pos: {deliveryScreenPos}");
             /*if (deliveryScreenPos.x > 0f && deliveryScreenPos.x < screenRect.rect.width && deliveryScreenPos.y > 0f &&
                 deliveryScreenPos.y < screenRect.rect.height)
             {
