@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -13,7 +14,15 @@ public class DrivingController : MonoBehaviour
     public float DriftForwardDragMultiplier = 0.5f;
     public float DriftSidewayDragMultiplier = 0.1f;
     public float DriftingTurnSpeedMultiplier = 1.2f;
-    
+    public ParticleSystem DrivingEmitter;
+    private bool isRunning;
+    private bool wasRunning;
+
+    private void Start()
+    {
+        DrivingEmitter.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+    }
+
     void Update()
     {
         var verticalInput = Input.GetAxis("Vertical");
@@ -24,6 +33,14 @@ public class DrivingController : MonoBehaviour
         var sidewayDrag = SidewayDrag;
         float currentTurnSpeed = TurnSpeed;
         var moveDot = math.dot(transform.forward, Rigidbody.linearVelocity.normalized);
+
+        isRunning = verticalInput != 0;
+        if (isRunning && isRunning != wasRunning)
+            DrivingEmitter.Play(true);
+        else if (!isRunning && isRunning != wasRunning)
+            DrivingEmitter.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        wasRunning = isRunning;
+
 
         if (drifting)
         {
