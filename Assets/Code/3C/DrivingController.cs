@@ -1,6 +1,7 @@
 using System;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DrivingController : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class DrivingController : MonoBehaviour
     public ParticleSystem DrivingEmitter;
     private bool isRunning;
     private bool wasRunning;
+
+    public UnityEvent<bool> _brakeChanging;
+    private bool braking;
 
     private void Start()
     {
@@ -51,6 +55,18 @@ public class DrivingController : MonoBehaviour
         {
             currentMaxVelocity = MaxVelocityBoost;
         }
+
+        if (verticalInput < 0 && !braking)
+        {
+            braking = true;
+            _brakeChanging.Invoke(true);
+        }
+
+        if (verticalInput >= 0 && braking)
+        {
+            braking = false;
+            _brakeChanging.Invoke(false);
+        }
         
         var moveDot = math.dot(transform.forward, Rigidbody.linearVelocity.normalized);
 
@@ -59,6 +75,7 @@ public class DrivingController : MonoBehaviour
             DrivingEmitter.Play(true);
         else if (!isRunning && isRunning != wasRunning)
             DrivingEmitter.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        
         wasRunning = isRunning;
 
         if (Scaler.CurrentScale == PlayerScale.Big)
