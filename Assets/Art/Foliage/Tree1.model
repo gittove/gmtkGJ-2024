@@ -1,0 +1,21 @@
+# Made using Asset Forge (2.4.1)
+
+:materials
+
+[name:wood;color:RGBA(0.840, 0.435, 0.305, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:foliage;color:RGBA(0.000, 0.655, 0.486, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+
+:models
+
+[name:;collection:Foliage;type:trunk_split;position:(-0.3000, 2.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:trunk;position:(-0.3000, 1.5000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:trunk_skewLarge;position:(-0.1000, 1.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:trunk_skew;position:(0.0000, 0.5000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:trunk_detailedB;position:(0.0000, 0.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:tree_branchLongBend;position:(0.0000, 1.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:trunk;position:(-0.0880, 2.4122, 1.0000);rotation:(0.0000, 0.0000, 315.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:trunk;position:(0.2655, 2.7658, 1.0000);rotation:(0.0000, 0.0000, 315.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:trunk;position:(-0.5123, 2.4121, 1.0000);rotation:(0.0000, 0.0000, 45.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:leafs_round;position:(-1.0200, 2.7000, 0.8774);rotation:(0.0000, 0.0000, 0.0000);scale:(2.2400, 2.0000, 2.0000);group:;locked:False;hidden:False;materials:foliage;]
+[name:;collection:Foliage;type:leafs_round;position:(0.4800, 2.8000, 0.7774);rotation:(0.0000, 0.0000, 0.0000);scale:(2.2400, 3.6000, 2.0000);group:;locked:False;hidden:False;materials:foliage;]
+[name:;collection:Foliage;type:leafs_round;position:(0.0000, 1.0000, 1.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:;locked:False;hidden:False;materials:foliage;]
