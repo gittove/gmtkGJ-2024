@@ -66,7 +66,7 @@ MonoBehaviour:
   SidewayDrag: 10
   DriftForwardDragMultiplier: 1.3
   DriftSidewayDragMultiplier: 0.03
-  DriftingTurnSpeedMultiplier: 1.2
+  DriftingTurnSpeedMultiplier: 2
   DrivingEmitter: {fileID: 6572406052255396915}
 --- !u!54 &9173743438842922095
 Rigidbody:

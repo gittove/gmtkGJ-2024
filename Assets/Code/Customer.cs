@@ -10,7 +10,7 @@ public class Customer : MonoBehaviour
 
     private void Start()
     {
-        _deliverSquare = GetComponentInChildren<DeliverySquare>();
+        _deliverSquare = GetComponentInChildren<DeliverySquare>(true);
         _deliverSquare.gameObject.SetActive(false);
     }
 
