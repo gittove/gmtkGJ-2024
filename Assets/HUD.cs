@@ -14,7 +14,8 @@ public class HUD : MonoBehaviour
     }
     private DrivingController Player;
     private DeliverySquare[] DeliverySquares;
-    public Camera MainCamera;
+    private Camera MainCamera;
+    private WinScreen WinScreen;
     
     public TMP_Text ScoreText;
     public TMP_Text GameTimerText;
@@ -24,9 +25,12 @@ public class HUD : MonoBehaviour
     public GameObject DeliveryScreenIndicator;
     private List<ScreenIndicator> DeliveryIndicators;
 
+    private int Score;
+
     void Start()
     {
         MainCamera = Camera.main;
+        WinScreen = FindFirstObjectByType<WinScreen>(FindObjectsInactive.Include);
 
         DeliveryIndicators = new List<ScreenIndicator>();
         DeliveryScreenIndicator.SetActive(false);
@@ -84,7 +88,7 @@ public class HUD : MonoBehaviour
             }
             
             var indicatorTimer = delivery.Indicator.GetComponentInChildren<Slider>();
-            indicatorTimer.value = delivery.Order._timer / 30f;
+            indicatorTimer.value = delivery.Order._timer / Order.ORDER_TIME;
             
             var deliveryDirection = deliveryPos - Player.gameObject.transform.position;
             var depth = Vector3.Dot(deliveryPos - MainCamera.transform.position, MainCamera.transform.forward);
@@ -117,5 +121,16 @@ public class HUD : MonoBehaviour
             var angle = Vector3.SignedAngle(Vector3.forward, deliveryDirection.normalized, Vector3.up);
             indicatorImage.rectTransform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
         }
+
+        if (gameTimer <= 0f)
+        {
+            WinScreen.Show();
+        }
+    }
+
+    public void GainScore(int score)
+    {
+        Score += score;
+        ScoreText.text = $"{Score}";
     }
 }
