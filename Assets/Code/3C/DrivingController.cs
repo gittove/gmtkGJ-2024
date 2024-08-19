@@ -163,7 +163,6 @@ public class DrivingController : MonoBehaviour
             grip *= HandbrakeGripFactor;
         }
 
-        Debug.Log($"{grip}");
         Rigidbody.linearVelocity = Vector3.RotateTowards(velocity, expectedVelocity, grip * Mathf.Deg2Rad * Time.deltaTime, Acceleration * Time.deltaTime);
     }
 
