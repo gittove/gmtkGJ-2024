@@ -96,11 +96,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 530292c78d2f8294a9bd621fccc479b6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5542df01e5955724c82ced74327943c6, type: 2}
+      objectReference: {fileID: 2100000, guid: 115237cf7f019354d96ee6b51e4127cb, type: 2}
     - target: {fileID: -7511558181221131132, guid: 530292c78d2f8294a9bd621fccc479b6, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 115237cf7f019354d96ee6b51e4127cb, type: 2}
+      objectReference: {fileID: 2100000, guid: 5542df01e5955724c82ced74327943c6, type: 2}
     - target: {fileID: 919132149155446097, guid: 530292c78d2f8294a9bd621fccc479b6, type: 3}
       propertyPath: m_Name
       value: squeeze
