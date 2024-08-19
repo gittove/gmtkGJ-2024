@@ -42,10 +42,7 @@ public class HUD : MonoBehaviour
     {
         var canvas = GetComponent<Canvas>();
         GameObject newObj = Instantiate(DeliveryScreenIndicator);
-        //Image newImage = newObj.AddComponent<Image>();
-        //newImage.material = DeliveryScreenIndicator.GetComponent<Image>().material;
         newObj.GetComponent<RectTransform>().SetParent(canvas.transform, false);
-        //newObj.AddComponent<CanvasRenderer>();
         newObj.SetActive(true);
         var indicator = new ScreenIndicator();
         indicator.Indicator = newObj;
@@ -60,6 +57,7 @@ public class HUD : MonoBehaviour
             if (indicator.Order == order)
             {
                 DeliveryIndicators.Remove(indicator);
+                Destroy(indicator.Indicator);
                 break;
             }
         }
@@ -67,7 +65,6 @@ public class HUD : MonoBehaviour
     
     void Update()
     {
-        var screenRect = GetComponent<RectTransform>();
         DeliverySquares = FindObjectsByType<DeliverySquare>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         gameTimer -= Time.deltaTime;
         TimeSpan timeSpan = TimeSpan.FromSeconds(gameTimer);
@@ -85,30 +82,40 @@ public class HUD : MonoBehaviour
                     break;
                 }
             }
+            
+            var indicatorTimer = delivery.Indicator.GetComponentInChildren<Slider>();
+            indicatorTimer.value = delivery.Order._timer / 30f;
+            
             var deliveryDirection = deliveryPos - Player.gameObject.transform.position;
             var depth = Vector3.Dot(deliveryPos - MainCamera.transform.position, MainCamera.transform.forward);
             var deliveryScreenPos = MainCamera.WorldToScreenPoint(deliveryPos);
             if (depth < 0)
             {
-                deliveryScreenPos.x = screenRect.rect.width - deliveryScreenPos.x;
-                deliveryScreenPos.y = screenRect.rect.height - deliveryScreenPos.y;
+                deliveryScreenPos.x = Screen.width - deliveryScreenPos.x;
+                deliveryScreenPos.y = Screen.height - deliveryScreenPos.y;
             }
-            /*if (deliveryScreenPos.x > 0f && deliveryScreenPos.x < screenRect.rect.width && deliveryScreenPos.y > 0f &&
-                deliveryScreenPos.y < screenRect.rect.height)
+            
+            var canvas = GetComponent<Canvas>();
+            var indicatorImage = delivery.Indicator.GetComponent<ImageRef>().ImageReference;
+            var indicatorRect = delivery.Indicator.GetComponent<RectTransform>();
+            var indicatorHalfWidth = (indicatorRect.rect.width * canvas.scaleFactor) / 2f;
+            var indicatorHalfHeight = (indicatorRect.rect.height * canvas.scaleFactor) / 2f;
+            if (deliveryScreenPos.x > 0f + indicatorHalfWidth && deliveryScreenPos.x < Screen.width - indicatorHalfWidth 
+                && deliveryScreenPos.y > 0f + indicatorHalfHeight && deliveryScreenPos.y < Screen.height - indicatorHalfHeight)
             {
-                DeliveryScreenIndicator.rectTransform.position = deliveryScreenPos;
+                delivery.Indicator.transform.position = deliveryScreenPos;
+                indicatorImage.enabled = false;
                 continue;
-            }*/
-            var indicatorImage = delivery.Indicator.GetComponent<Image>();
-            var imageRect = indicatorImage.rectTransform.rect;
-            deliveryScreenPos.x = math.clamp(deliveryScreenPos.x, 0f + imageRect.width/2, screenRect.rect.width - imageRect.width/2);
-            deliveryScreenPos.y = math.clamp(deliveryScreenPos.y, 0f + imageRect.height/2, screenRect.rect.height - imageRect.height/2);
+            }
+
+            if (!indicatorImage.enabled)
+                indicatorImage.enabled = true;
+            
+            deliveryScreenPos.x = math.clamp(deliveryScreenPos.x, 0f + indicatorHalfWidth, Screen.width - indicatorHalfWidth);
+            deliveryScreenPos.y = math.clamp(deliveryScreenPos.y, 0f + indicatorHalfHeight, Screen.height - indicatorHalfHeight);
             delivery.Indicator.transform.position = deliveryScreenPos;
             var angle = Vector3.SignedAngle(Vector3.forward, deliveryDirection.normalized, Vector3.up);
-            delivery.Indicator.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
-
-            var indicatorTimer = delivery.Indicator.GetComponentInChildren<Slider>();
-            indicatorTimer.value = delivery.Order._timer / 30f;
+            indicatorImage.rectTransform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
         }
     }
 }
