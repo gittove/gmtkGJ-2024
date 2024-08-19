@@ -1,14 +1,19 @@
 using System;
 using TMPro;
 using Unity.Mathematics;
-using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class HUD : MonoBehaviour
 {
+    private class ScreenIndicator
+    {
+        public GameObject Indicator;
+        public Order Order;
+    }
     private DrivingController Player;
-    private DeliverySquare[] Deliveries;
+    private DeliverySquare[] DeliverySquares;
     public Camera MainCamera;
     
     public TMP_Text ScoreText;
@@ -16,15 +21,16 @@ public class HUD : MonoBehaviour
     public int GameTime = 5;
     private float gameTimer;
 
-    public Image DeliveryScreenIndicator;
+    public GameObject DeliveryScreenIndicator;
+    private List<ScreenIndicator> DeliveryIndicators;
 
     void Start()
     {
         MainCamera = Camera.main;
 
-        DeliveryScreenIndicator.enabled = false;
+        DeliveryIndicators = new List<ScreenIndicator>();
+        DeliveryScreenIndicator.SetActive(false);
         Player = FindFirstObjectByType<DrivingController>(FindObjectsInactive.Include);
-        DeliveryScreenIndicator.enabled = false;
         ScoreText.text = "0";
         TimeSpan timeSpan = TimeSpan.FromMinutes(GameTime);
         string timeText = string.Format("{0:0}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
@@ -32,32 +38,84 @@ public class HUD : MonoBehaviour
         gameTimer = (float)timeSpan.TotalSeconds;
     }
 
+    public void AddIndicator(Order order)
+    {
+        var canvas = GetComponent<Canvas>();
+        GameObject newObj = Instantiate(DeliveryScreenIndicator);
+        newObj.GetComponent<RectTransform>().SetParent(canvas.transform, false);
+        newObj.SetActive(true);
+        var indicator = new ScreenIndicator();
+        indicator.Indicator = newObj;
+        indicator.Order = order;
+        DeliveryIndicators.Add(indicator);
+    }
+
+    public void RemoveIndicator(Order order)
+    {
+        foreach (var indicator in DeliveryIndicators)
+        {
+            if (indicator.Order == order)
+            {
+                DeliveryIndicators.Remove(indicator);
+                Destroy(indicator.Indicator);
+                break;
+            }
+        }
+    }
+    
     void Update()
     {
-        var screenRect = GetComponent<RectTransform>();
-        
-        Deliveries = FindObjectsByType<DeliverySquare>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        DeliverySquares = FindObjectsByType<DeliverySquare>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         gameTimer -= Time.deltaTime;
         TimeSpan timeSpan = TimeSpan.FromSeconds(gameTimer);
         string timeText = string.Format("{0:D1}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
         GameTimerText.text = timeText;
 
-        foreach (var delivery in Deliveries)
+        foreach (var delivery in DeliveryIndicators)
         {
-            DeliveryScreenIndicator.enabled = true;
-            var deliveryScreenPos = MainCamera.WorldToScreenPoint(delivery.gameObject.transform.position);
-            /*if (deliveryScreenPos.x > 0f && deliveryScreenPos.x < screenRect.rect.width && deliveryScreenPos.y > 0f &&
-                deliveryScreenPos.y < screenRect.rect.height)
+            var deliveryPos = Vector3.zero;
+            foreach (var square in DeliverySquares)
             {
-                DeliveryScreenIndicator.rectTransform.position = deliveryScreenPos;
+                if (square.OrderID == delivery.Order.GetInstanceID())
+                {
+                    deliveryPos = square.transform.position;
+                    break;
+                }
+            }
+            
+            var indicatorTimer = delivery.Indicator.GetComponentInChildren<Slider>();
+            indicatorTimer.value = delivery.Order._timer / 30f;
+            
+            var deliveryDirection = deliveryPos - Player.gameObject.transform.position;
+            var depth = Vector3.Dot(deliveryPos - MainCamera.transform.position, MainCamera.transform.forward);
+            var deliveryScreenPos = MainCamera.WorldToScreenPoint(deliveryPos);
+            if (depth < 0)
+            {
+                deliveryScreenPos.x = Screen.width - deliveryScreenPos.x;
+                deliveryScreenPos.y = Screen.height - deliveryScreenPos.y;
+            }
+            
+            var canvas = GetComponent<Canvas>();
+            var indicatorImage = delivery.Indicator.GetComponent<ImageRef>().ImageReference;
+            var indicatorRect = delivery.Indicator.GetComponent<RectTransform>();
+            var indicatorHalfWidth = (indicatorRect.rect.width * canvas.scaleFactor) / 2f;
+            var indicatorHalfHeight = (indicatorRect.rect.height * canvas.scaleFactor) / 2f;
+            if (deliveryScreenPos.x > 0f + indicatorHalfWidth && deliveryScreenPos.x < Screen.width - indicatorHalfWidth 
+                && deliveryScreenPos.y > 0f + indicatorHalfHeight && deliveryScreenPos.y < Screen.height - indicatorHalfHeight)
+            {
+                delivery.Indicator.transform.position = deliveryScreenPos;
+                indicatorImage.enabled = false;
                 continue;
-            }*/
-            var deliveryDirection = delivery.gameObject.transform.position - Player.gameObject.transform.position;
+            }
+
+            if (!indicatorImage.enabled)
+                indicatorImage.enabled = true;
+            
+            deliveryScreenPos.x = math.clamp(deliveryScreenPos.x, 0f + indicatorHalfWidth, Screen.width - indicatorHalfWidth);
+            deliveryScreenPos.y = math.clamp(deliveryScreenPos.y, 0f + indicatorHalfHeight, Screen.height - indicatorHalfHeight);
+            delivery.Indicator.transform.position = deliveryScreenPos;
             var angle = Vector3.SignedAngle(Vector3.forward, deliveryDirection.normalized, Vector3.up);
-            deliveryScreenPos.x = math.clamp(deliveryScreenPos.x, 0f + DeliveryScreenIndicator.rectTransform.rect.width/2, screenRect.rect.width - DeliveryScreenIndicator.rectTransform.rect.width/2);
-            deliveryScreenPos.y = math.clamp(deliveryScreenPos.y, 0f + DeliveryScreenIndicator.rectTransform.rect.height/2, screenRect.rect.height - DeliveryScreenIndicator.rectTransform.rect.height/2);
-            DeliveryScreenIndicator.rectTransform.position = deliveryScreenPos;
-            DeliveryScreenIndicator.rectTransform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
+            indicatorImage.rectTransform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
         }
     }
 }

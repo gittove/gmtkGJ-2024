@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DeliverySquare : MonoBehaviour
 {
-    [SerializeField] private int OrderID;
+    [SerializeField] public int OrderID;
     private float _deliverInteractionTimeSeconds = 2f;
 
     private float _interactionTimer;
