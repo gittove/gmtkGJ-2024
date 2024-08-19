@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Order : MonoBehaviour
 {
+    public const float ORDER_TIME = 30f;
     private HUD playerHUD;
     public float _timer;
 
@@ -26,6 +27,9 @@ public class Order : MonoBehaviour
 
     public void Complete()
     {
+        float score = 300;
+        score *= _timer / ORDER_TIME;
+        playerHUD.GainScore((int)score);
         playerHUD.RemoveIndicator(this);
         Destroy(this.gameObject);
     }
