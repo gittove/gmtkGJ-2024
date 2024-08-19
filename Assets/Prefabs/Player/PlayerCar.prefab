@@ -423,6 +423,59 @@ Transform:
   - {fileID: 8716746886781089236}
   m_Father: {fileID: 2889564603383695815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2053789366435218000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854606340522661099}
+  - component: {fileID: 7482254626658913658}
+  m_Layer: 3
+  m_Name: Collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1854606340522661099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053789366435218000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2889564603383695815}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7482254626658913658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053789366435218000}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.4983966, z: 2.272776}
+  m_Center: {x: -2.8362512e-12, y: 1.0407833, z: -0.037817955}
 --- !u!1 &2458125465258446476
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +522,6 @@ GameObject:
   - component: {fileID: 2889564603383695815}
   - component: {fileID: 7795134938440433871}
   - component: {fileID: 9173743438842922095}
-  - component: {fileID: 6726560132819774516}
   - component: {fileID: 2622534057870333894}
   - component: {fileID: 7438002498263014291}
   - component: {fileID: 693032037725283669}
@@ -502,6 +554,7 @@ Transform:
   - {fileID: 721147295420109817}
   - {fileID: 6562668253318132737}
   - {fileID: 3833770031890063513}
+  - {fileID: 1854606340522661099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7795134938440433871
@@ -520,49 +573,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0019590072
-      value: 0.8105829
-      inSlope: 1.7997763
-      outSlope: 1.7997763
-      tangentMode: 34
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.09215187
-      value: 0.97290987
-      inSlope: 0.35719967
-      outSlope: 0.35719967
-      tangentMode: 34
+      time: 1
+      value: 0.5
+      inSlope: -0.68826234
+      outSlope: -0.68826234
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.27454558
-      value: 0.77494395
-      inSlope: -0.8360669
-      outSlope: -0.8360669
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.62343496
-      value: 0.5702307
-      inSlope: -0.9306576
-      outSlope: -0.9306576
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.990205
-      value: 0.10276091
-      inSlope: -1.2745584
-      outSlope: -1.2745584
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.0880231
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -623,6 +649,8 @@ MonoBehaviour:
   MinimumSpeedToTurn: 0.3
   MaxGrip: 90
   HandbrakeGripFactor: 0.45
+  HandbrakeTurnFactor: 1.35
+  SmallSpeedMultiplier: 0.35
   MaxVelocity: 35
   MaxVelocityBoost: 80
   Rigidbody: {fileID: 9173743438842922095}
@@ -694,27 +722,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 1
---- !u!65 &6726560132819774516
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3334854009784494693}
-  m_Material: {fileID: 13400000, guid: 8d7bcbfd1c3de004c81a5386abb448a1, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.81, y: 1.57, z: 2.11}
-  m_Center: {x: 0, y: 0.94, z: -0.11}
 --- !u!114 &2622534057870333894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6353,6 +6360,7 @@ GameObject:
   - component: {fileID: 5943513898416977882}
   - component: {fileID: 5086483188210990618}
   - component: {fileID: 3164315848828492223}
+  - component: {fileID: 2888794654204463264}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -6368,8 +6376,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5033392911782669144}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5584632, y: -0.0000001157645, z: 0.000000077867185, w: 0.82952935}
-  m_LocalPosition: {x: 0, y: 21.4, z: -8.69}
+  m_LocalRotation: {x: 0.00033591976, y: 0.82952917, z: -0.5584632, w: 0.00049896794}
+  m_LocalPosition: {x: -0.0104541825, y: 21.399998, z: 8.689996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6417,7 +6425,7 @@ MonoBehaviour:
       Curvature: {x: 2, y: 11}
       BarrelClipping: 0.25
       Anamorphism: 0
-  BlendHint: 0
+  BlendHint: 1
 --- !u!114 &5086483188210990618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6466,6 +6474,21 @@ MonoBehaviour:
     Time: 0
     Smoothing: 0
     IgnoreY: 0
+--- !u!114 &2888794654204463264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5033392911782669144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e73170783074d3897ea8f989d8b611c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 5943513898416977882}
+  Scale: {fileID: 2622534057870333894}
+  SmallFOV: 25
 --- !u!1 &6396576348735849547
 GameObject:
   m_ObjectHideFlags: 0
