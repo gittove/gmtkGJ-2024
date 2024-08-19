@@ -5,7 +5,7 @@ using UnityEngine;
 public class Order : MonoBehaviour
 {
     private HUD playerHUD;
-    private float _timer;
+    public float _timer;
     
     [SerializeField] private float _pickupInteractionSeconds = 2f;
     [SerializeField] private GameObject _pickupMesh;

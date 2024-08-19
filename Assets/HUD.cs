@@ -9,7 +9,7 @@ public class HUD : MonoBehaviour
 {
     private class ScreenIndicator
     {
-        public Image Image;
+        public GameObject Indicator;
         public Order Order;
     }
     private DrivingController Player;
@@ -21,7 +21,7 @@ public class HUD : MonoBehaviour
     public int GameTime = 5;
     private float gameTimer;
 
-    public Image DeliveryScreenIndicator;
+    public GameObject DeliveryScreenIndicator;
     private List<ScreenIndicator> DeliveryIndicators;
 
     void Start()
@@ -29,9 +29,8 @@ public class HUD : MonoBehaviour
         MainCamera = Camera.main;
 
         DeliveryIndicators = new List<ScreenIndicator>();
-        DeliveryScreenIndicator.enabled = false;
+        DeliveryScreenIndicator.SetActive(false);
         Player = FindFirstObjectByType<DrivingController>(FindObjectsInactive.Include);
-        DeliveryScreenIndicator.enabled = false;
         ScoreText.text = "0";
         TimeSpan timeSpan = TimeSpan.FromMinutes(GameTime);
         string timeText = string.Format("{0:0}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
@@ -42,14 +41,14 @@ public class HUD : MonoBehaviour
     public void AddIndicator(Order order)
     {
         var canvas = GetComponent<Canvas>();
-        GameObject newObj = new GameObject();
-        Image newImage = newObj.AddComponent<Image>();
-        newImage.material = DeliveryScreenIndicator.material;
+        GameObject newObj = Instantiate(DeliveryScreenIndicator);
+        //Image newImage = newObj.AddComponent<Image>();
+        //newImage.material = DeliveryScreenIndicator.GetComponent<Image>().material;
         newObj.GetComponent<RectTransform>().SetParent(canvas.transform, false);
         //newObj.AddComponent<CanvasRenderer>();
         newObj.SetActive(true);
         var indicator = new ScreenIndicator();
-        indicator.Image = newImage;
+        indicator.Indicator = newObj;
         indicator.Order = order;
         DeliveryIndicators.Add(indicator);
     }
@@ -100,12 +99,16 @@ public class HUD : MonoBehaviour
                 DeliveryScreenIndicator.rectTransform.position = deliveryScreenPos;
                 continue;
             }*/
-            var angle = Vector3.SignedAngle(Vector3.forward, deliveryDirection.normalized, Vector3.up);
-            var imageRect = delivery.Image.rectTransform.rect;
+            var indicatorImage = delivery.Indicator.GetComponent<Image>();
+            var imageRect = indicatorImage.rectTransform.rect;
             deliveryScreenPos.x = math.clamp(deliveryScreenPos.x, 0f + imageRect.width/2, screenRect.rect.width - imageRect.width/2);
             deliveryScreenPos.y = math.clamp(deliveryScreenPos.y, 0f + imageRect.height/2, screenRect.rect.height - imageRect.height/2);
-            delivery.Image.rectTransform.position = deliveryScreenPos;
-            delivery.Image.rectTransform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
+            delivery.Indicator.transform.position = deliveryScreenPos;
+            var angle = Vector3.SignedAngle(Vector3.forward, deliveryDirection.normalized, Vector3.up);
+            delivery.Indicator.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -angle));
+
+            var indicatorTimer = delivery.Indicator.GetComponentInChildren<Slider>();
+            indicatorTimer.value = delivery.Order._timer / 30f;
         }
     }
 }
