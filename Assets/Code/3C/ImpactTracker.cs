@@ -17,6 +17,11 @@ public class ImpactTracker : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.CompareTag("CarPart"))
+        {
+            return;
+        }
+        
         var mag = other.relativeVelocity.magnitude; 
         if (mag > _thresholds.z)
         {
@@ -33,8 +38,6 @@ public class ImpactTracker : MonoBehaviour
         {
             _smallImpact.Invoke();
         }
-
-
     }
 
     private void OnTriggerEnter(Collider other)

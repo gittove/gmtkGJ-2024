@@ -2,25 +2,48 @@ using UnityEngine;
 
 public class CarDestruction : MonoBehaviour
 {
-    public Rigidbody[] DestructionParts;
+    public GameObject[] DestructionParts;
 
+    private DrivingController _drivingController;
     private int _index = 0;
+    private bool _done;
+    
+    [SerializeField] private float _destructionCooldown;
+    private float _destructionCooldownTimer;
 
     private void Start()
     {
+        _done = false;
         _index = 0;
+        _drivingController = GetComponent<DrivingController>();
+        _destructionCooldownTimer = _destructionCooldown;
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        _destructionCooldownTimer -= Time.deltaTime;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (_done || collision.relativeVelocity.magnitude < 3 || _destructionCooldownTimer > 0f)
         {
-            var part = DestructionParts[_index];
+            return;
+        }
 
-            part.isKinematic = false;
-            part.AddExplosionForce(1000f, part.gameObject.transform.position, 1f);
+        DestructionParts[_index].transform.parent = null;
+        var part = DestructionParts[_index].AddComponent<Rigidbody>();
+        DestructionParts[_index].AddComponent<BoxCollider>();
 
-            _index++;
+        part.AddExplosionForce(100f, part.gameObject.transform.position, 1f);
+
+        _index++;
+        _drivingController.MovementSpeed += 2;
+        _destructionCooldownTimer = _destructionCooldown;
+
+        if (_index >= DestructionParts.Length)
+        {
+            _done = true;
         }
     }
 }
