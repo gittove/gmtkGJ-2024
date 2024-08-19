@@ -7,6 +7,7 @@ public class Restaurant : MonoBehaviour
     
     private float _weight;
     private float _depletionWeight;
+    private GameObject _orderObject;
 
     public float Weight => _weight * _depletionWeight;
 
@@ -18,7 +19,7 @@ public class Restaurant : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void ActivateOrder()
