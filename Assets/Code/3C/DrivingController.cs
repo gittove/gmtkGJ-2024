@@ -123,38 +123,44 @@ public class DrivingController : MonoBehaviour
             maxReverse *= SmallSpeedMultiplier;
         }
         
-        if (brake == 0)
+        if (accel > 0)
         {
-            if (accel > 0)
+            var speed = Rigidbody.linearVelocity.magnitude;
+            var acceleration = AccelerationCurve.Evaluate(speed / maxVelocity) * Acceleration;
+            if (Scaler.CurrentScale == PlayerScale.Small)
             {
-                var speed = Rigidbody.linearVelocity.magnitude;
-                var acceleration = AccelerationCurve.Evaluate(speed / maxVelocity) * Acceleration;
-                if (Scaler.CurrentScale == PlayerScale.Small)
-                {
-                    acceleration *= SmallSpeedMultiplier;
-                }
-                velocity += forward * (acceleration * accel * Time.deltaTime);
+                acceleration *= SmallSpeedMultiplier;
             }
-            else
-            {
-                var magnitude = velocity.magnitude;
-                magnitude = Mathf.MoveTowards(magnitude, 0, EngineBrake * Time.deltaTime);
-                velocity = velocity.normalized * magnitude;
-            }
+            velocity += forward * (acceleration * accel * Time.deltaTime);
         }
         else
+        {
+            var magnitude = velocity.magnitude;
+            magnitude = Mathf.MoveTowards(magnitude, 0, EngineBrake * Time.deltaTime);
+            velocity = velocity.normalized * magnitude;
+        }
+        if (brake > 0)
         {
             var reverse = BrakeSpeed;
             if (Scaler.CurrentScale == PlayerScale.Small)
             {
                 reverse *= SmallSpeedMultiplier;
             }
-            velocity += -forward * (reverse * brake * Time.deltaTime);
+
+            if (velocity.magnitude < maxReverse)
+            {
+                velocity += -forward * (reverse * brake * Time.deltaTime);
+            }
+            else
+            {
+                var magnitude = velocity.magnitude;
+                magnitude = Mathf.MoveTowards(magnitude, 0, BrakeSpeed * Time.deltaTime);
+                velocity = velocity.normalized * magnitude;
+            }
         }
 
         velocity.y = 0;
-        var dot = Vector3.Dot(transform.forward, velocity);  
-        velocity = Vector3.ClampMagnitude(velocity, dot > 0 ? maxVelocity : maxReverse);
+        velocity = Vector3.ClampMagnitude(velocity, maxVelocity);
         Rigidbody.linearVelocity = velocity;
     }
 
@@ -174,21 +180,20 @@ public class DrivingController : MonoBehaviour
         var angVel = Rigidbody.angularVelocity;
         if (horizontalInput != 0 && velocity.magnitude > MinimumSpeedToTurn)
         {
+            var finalTurn = TurningCurve.Evaluate(velocity.magnitude / MaxVelocity) * turnSpeed;
             if (horizontalInput > 0)
             {
-                angVel.y = Mathf.MoveTowards(angVel.y, maxTurnSpeed, turnSpeed * Time.deltaTime);
+                angVel.y = Mathf.MoveTowards(angVel.y, maxTurnSpeed, finalTurn * Time.deltaTime);
             }
             else
             {
-                angVel.y = Mathf.MoveTowards(angVel.y, -maxTurnSpeed, -turnSpeed * Time.deltaTime);
+                angVel.y = Mathf.MoveTowards(angVel.y, -maxTurnSpeed, -finalTurn * Time.deltaTime);
             }
         }
         else
         {
             angVel.y = Mathf.MoveTowards(angVel.y, 0, TurnAcceleration * Mathf.Deg2Rad * Time.deltaTime);
         }
-
-
 
         angVel.x = 0;
         angVel.z = 0;
