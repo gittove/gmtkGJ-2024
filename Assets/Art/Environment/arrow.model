@@ -1,0 +1,18 @@
+# Made using Asset Forge (2.4.1)
+
+:materials
+
+[name:stone;color:RGBA(0.571, 0.559, 0.736, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.5;valueB:0;]
+[name:_defaultMat;color:RGBA(0.939, 0.953, 1.000, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0.25;]
+[name:stoneLight;color:RGBA(0.710, 0.701, 0.840, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.5;valueB:0;]
+[name:foliage;color:RGBA(0.000, 0.655, 0.486, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:dark;color:RGBA(0.224, 0.235, 0.275, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:custom5;color:RGBA(0.834, 0.663, 0.972, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.5;valueB:0.15;]
+[name:custom6;color:RGBA(0.230, 0.226, 0.524, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.5;valueB:0.15;]
+
+:models
+
+[name:;collection:City;type:lightpost_signStreet%;position:(0.0000, 0.6000, 0.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(2.0000, 2.0000, 2.0000);group:Group_53;locked:False;hidden:False;materials:stone+custom6+stoneLight+foliage;]
+[name:;collection:Primitives;type:blockTriangle;position:(-0.0900, 0.9000, 0.1250);rotation:(0.0000, 90.0000, 270.0000);scale:(0.1200, 0.0500, 0.0945);group:;locked:False;hidden:False;materials:custom5;]
+[name:;collection:Primitives;type:block;position:(0.1000, 0.9000, 0.1000);rotation:(0.0000, 0.0000, 90.0000);scale:(0.0200, 0.1750, 0.0500);group:;locked:False;hidden:False;materials:custom5;]
+[name:;collection:City;type:lightpost_squarePole%;position:(0.0000, 0.0000, 0.0000);rotation:(0.0000, 0.0000, 0.0000);scale:(1.0000, 1.0000, 1.0000);group:Group_53;locked:False;hidden:False;materials:stone+stoneLight;]

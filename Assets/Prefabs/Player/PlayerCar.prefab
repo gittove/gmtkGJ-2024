@@ -516,46 +516,117 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8167ad54b01e64ebb6862417caf054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 30
-  TurnSpeed: 3
-  MinimumTurnSpeedMultiplier: 0.8
-  MaxVelocity: 25
+  AccelerationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0019590072
+      value: 0.8105829
+      inSlope: 1.7997763
+      outSlope: 1.7997763
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.09215187
+      value: 0.97290987
+      inSlope: 0.35719967
+      outSlope: 0.35719967
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.27454558
+      value: 0.77494395
+      inSlope: -0.8360669
+      outSlope: -0.8360669
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.62343496
+      value: 0.5702307
+      inSlope: -0.9306576
+      outSlope: -0.9306576
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.990205
+      value: 0.10276091
+      inSlope: -1.2745584
+      outSlope: -1.2745584
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TurningCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  GripCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Acceleration: 15
+  EngineBrake: 13
+  BrakeSpeed: 35
+  TurnAcceleration: 1440
+  MaxTurnSpeed: 165
+  MinimumSpeedToTurn: 0.3
+  MaxGrip: 90
+  HandbrakeGripFactor: 0.45
+  MaxVelocity: 35
   MaxVelocityBoost: 80
-  BoostTurnMultiplier: 0.25
   Rigidbody: {fileID: 9173743438842922095}
-  ForwardDrag: 20
-  SidewayDrag: 10
-  DriftForwardDragMultiplier: 1.3
-  DriftSidewayDragMultiplier: 0.03
-  DriftingTurnSpeedMultiplier: 2
   DrivingEmitter: {fileID: 6572406052255396915}
-  _brakeChanging:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 126964725110272779}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6396576348735849547}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   _driftChange:
     m_PersistentCalls:
       m_Calls:
@@ -595,6 +666,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Slippage: 0
 --- !u!54 &9173743438842922095
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -620,7 +692,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 84
   m_CollisionDetection: 1
 --- !u!65 &6726560132819774516
 BoxCollider:
@@ -760,7 +832,7 @@ MonoBehaviour:
   - {fileID: 5237035536330685413}
   - {fileID: 5253158247119287687}
   - {fileID: 6142050374598691322}
-  _destructionCooldown: 3
+  _destructionCooldown: 0
 --- !u!1 &3702863199255914384
 GameObject:
   m_ObjectHideFlags: 0
