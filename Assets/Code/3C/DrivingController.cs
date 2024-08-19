@@ -22,6 +22,7 @@ public class DrivingController : MonoBehaviour
     public float SmallSpeedMultiplier;
     
     public float MaxVelocity = 20f;
+    public float MaxReverseVelocity = 5f;
     public float MaxVelocityBoost = 40f;
 
     private ScaleReciever Scaler;
@@ -109,26 +110,32 @@ public class DrivingController : MonoBehaviour
 
     private void Accelerate()
     {
-        var accelInput = Input.GetAxis("Acceleration");
+        var accel = Input.GetAxis("Acceleration");
         var brake = Input.GetAxis("Brake"); 
         var forward = transform.forward.normalized;
         var velocity = Rigidbody.linearVelocity;
 
         var maxVelocity = MaxVelocity;
+        var maxReverse = MaxReverseVelocity;
         if (Scaler.CurrentScale == PlayerScale.Small)
         {
             maxVelocity *= SmallSpeedMultiplier;
+            maxReverse *= SmallSpeedMultiplier;
         }
         
         if (brake == 0)
         {
-            if (accelInput > 0)
+            if (accel > 0)
             {
                 var speed = Rigidbody.linearVelocity.magnitude;
                 var acceleration = AccelerationCurve.Evaluate(speed / maxVelocity) * Acceleration;
-                velocity += forward * (acceleration * accelInput * Time.deltaTime);
+                if (Scaler.CurrentScale == PlayerScale.Small)
+                {
+                    acceleration *= SmallSpeedMultiplier;
+                }
+                velocity += forward * (acceleration * accel * Time.deltaTime);
             }
-            else if (accelInput == 0)
+            else
             {
                 var magnitude = velocity.magnitude;
                 magnitude = Mathf.MoveTowards(magnitude, 0, EngineBrake * Time.deltaTime);
@@ -137,13 +144,17 @@ public class DrivingController : MonoBehaviour
         }
         else
         {
-            var magnitude = velocity.magnitude;
-            magnitude = Mathf.MoveTowards(magnitude, 0, BrakeSpeed * Time.deltaTime);
-            velocity = velocity.normalized * magnitude;
+            var reverse = BrakeSpeed;
+            if (Scaler.CurrentScale == PlayerScale.Small)
+            {
+                reverse *= SmallSpeedMultiplier;
+            }
+            velocity += -forward * (reverse * brake * Time.deltaTime);
         }
 
         velocity.y = 0;
-        velocity = Vector3.ClampMagnitude(velocity, maxVelocity);
+        var dot = Vector3.Dot(transform.forward, velocity);  
+        velocity = Vector3.ClampMagnitude(velocity, dot > 0 ? maxVelocity : maxReverse);
         Rigidbody.linearVelocity = velocity;
     }
 

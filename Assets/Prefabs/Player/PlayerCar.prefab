@@ -652,6 +652,7 @@ MonoBehaviour:
   HandbrakeTurnFactor: 1.35
   SmallSpeedMultiplier: 0.35
   MaxVelocity: 35
+  MaxReverseVelocity: 5
   MaxVelocityBoost: 80
   Rigidbody: {fileID: 9173743438842922095}
   DrivingEmitter: {fileID: 6572406052255396915}
@@ -839,7 +840,7 @@ MonoBehaviour:
   - {fileID: 5237035536330685413}
   - {fileID: 5253158247119287687}
   - {fileID: 6142050374598691322}
-  _destructionCooldown: 0
+  _destructionCooldown: 1.25
 --- !u!1 &3702863199255914384
 GameObject:
   m_ObjectHideFlags: 0
