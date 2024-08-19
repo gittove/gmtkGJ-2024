@@ -38,7 +38,7 @@ public class CarDestruction : MonoBehaviour
         part.AddExplosionForce(100f, part.gameObject.transform.position, 1f);
 
         _index++;
-        //_drivingController.MovementSpeed += 2;
+        _drivingController.MaxVelocity += 2;
         _destructionCooldownTimer = _destructionCooldown;
 
         if (_index >= DestructionParts.Length)

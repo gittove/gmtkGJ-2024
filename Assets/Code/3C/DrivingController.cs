@@ -17,8 +17,12 @@ public class DrivingController : MonoBehaviour
     public float MinimumSpeedToTurn = 0.3f;
     public float MaxGrip = 45f;
     public float HandbrakeGripFactor = 0.75f;
+    public float HandbrakeTurnFactor = 1.25f;
+
+    public float SmallSpeedMultiplier;
     
     public float MaxVelocity = 20f;
+    public float MaxReverseVelocity = 5f;
     public float MaxVelocityBoost = 40f;
 
     private ScaleReciever Scaler;
@@ -46,8 +50,6 @@ public class DrivingController : MonoBehaviour
 
     private void Update()
     {
-        //gameObject.transform.SetPositionAndRotation(new Vector3(transform.position.x, -0.155f * transform.localScale.y, transform.position.z), transform.rotation);
-        
         var handbrake = Input.GetAxis("Jump");
         _forceDrift = handbrake > 0;
         
@@ -62,42 +64,7 @@ public class DrivingController : MonoBehaviour
         
         var facingDotVelocity = math.dot(transform.forward, Rigidbody.linearVelocity.normalized);
         Slippage = facingDotVelocity;
-        
-        // if (Scaler.CurrentScale == PlayerScale.Big)
-        // {
-        //     currentMovementSpeed *= Scaler.BigSpeedMultiplier;
-        //     maxVelocity *= Scaler.BigMaxVelocityMultiplier;
-        //     forwardDrag *= Scaler.BigSpeedMultiplier;
-        //     sidewayDrag *= Scaler.BigSpeedMultiplier;
-        // }
-        // else if (Scaler.CurrentScale == PlayerScale.Small)
-        // {
-        //     currentMovementSpeed *= Scaler.SmallSpeedMultiplier;
-        //     maxVelocity *= Scaler.SmallMaxVelocityMultiplier;
-        //     forwardDrag *= Scaler.SmallSpeedMultiplier;
-        //     sidewayDrag *= Scaler.SmallSpeedMultiplier;
-        // }
 
-        // if (handbrake)
-        // {
-        //     turnSpeed = TurnSpeed * DriftingTurnSpeedMultiplier;
-        //     forwardDrag *= DriftForwardDragMultiplier;
-        //     sidewayDrag *= DriftSidewayDragMultiplier;
-        // }
-        //
-        // if (handbrake && !_drift)
-        // {
-        //     _drift = true;
-        //     _driftChange.Invoke(true);
-        // }
-        //
-        // if (!handbrake && _drift)
-        // {
-        //     _drift = false;
-        //     _driftChange.Invoke(false);
-        // }
-        
-        // var turnedDirection = Quaternion.AngleAxis(turnAngle, Vector3.up) * transform.forward;
         var desiredDirection = transform.forward;
         var speedMultiplier = math.unlerp(0f, MaxVelocity, Rigidbody.linearVelocity.magnitude);
         speedMultiplier = math.clamp(speedMultiplier, MinimumSpeedToTurn, 1f);
@@ -123,31 +90,6 @@ public class DrivingController : MonoBehaviour
                 _driftChange.Invoke(_drift);
             }
         }
-        
-        // var rotatedForward = Vector3.RotateTowards(transform.forward, desiredDirection.normalized, turnSpeed * deltaTime * speedMultiplier, MaxVelocity);
-        // /*if(Rigidbody.linearVelocity.magnitude > 0.3f)
-        //     transform.rotation = Quaternion.LookRotation(rotatedForward.normalized);*/
-        //
-        // Vector3 moveVector = rotatedForward * (accelInput * acceleration);
-        // if (Rigidbody.linearVelocity.magnitude < maxVelocity)
-        // {
-        //     Rigidbody.linearVelocity += moveVector * deltaTime;
-        // }
-        //
-        //
-        // Rigidbody.linearVelocity += (transform.forward * (facingDotVelocity * Rigidbody.linearVelocity.magnitude) - Rigidbody.linearVelocity) * (sidewayDrag * deltaTime);
-        // var preDragVel = Rigidbody.linearVelocity;
-        // Rigidbody.linearVelocity -= Rigidbody.linearVelocity.normalized * (forwardDrag * deltaTime);
-        // if (math.dot(preDragVel, Rigidbody.linearVelocity) < 0f)
-        //     Rigidbody.linearVelocity = Vector3.zero;
-        
-        // var clampedVelocity = math.clamp(Rigidbody.linearVelocity, -maxVelocity, maxVelocity);
-        // Rigidbody.linearVelocity = clampedVelocity;
-
-        // if (Rigidbody.linearVelocity.magnitude > 0.3f)
-        // {
-        //     transform.rotation = Quaternion.LookRotation(rotatedForward.normalized);
-        // }
     }
 
     private void Compensate()
@@ -168,20 +110,32 @@ public class DrivingController : MonoBehaviour
 
     private void Accelerate()
     {
-        var accelInput = Input.GetAxis("Acceleration");
+        var accel = Input.GetAxis("Acceleration");
         var brake = Input.GetAxis("Brake"); 
         var forward = transform.forward.normalized;
         var velocity = Rigidbody.linearVelocity;
 
+        var maxVelocity = MaxVelocity;
+        var maxReverse = MaxReverseVelocity;
+        if (Scaler.CurrentScale == PlayerScale.Small)
+        {
+            maxVelocity *= SmallSpeedMultiplier;
+            maxReverse *= SmallSpeedMultiplier;
+        }
+        
         if (brake == 0)
         {
-            if (accelInput > 0)
+            if (accel > 0)
             {
                 var speed = Rigidbody.linearVelocity.magnitude;
-                var acceleration = AccelerationCurve.Evaluate(speed / MaxVelocity) * Acceleration;
-                velocity += forward * (acceleration * accelInput * Time.deltaTime);
+                var acceleration = AccelerationCurve.Evaluate(speed / maxVelocity) * Acceleration;
+                if (Scaler.CurrentScale == PlayerScale.Small)
+                {
+                    acceleration *= SmallSpeedMultiplier;
+                }
+                velocity += forward * (acceleration * accel * Time.deltaTime);
             }
-            else if (accelInput == 0)
+            else
             {
                 var magnitude = velocity.magnitude;
                 magnitude = Mathf.MoveTowards(magnitude, 0, EngineBrake * Time.deltaTime);
@@ -190,13 +144,17 @@ public class DrivingController : MonoBehaviour
         }
         else
         {
-            var magnitude = velocity.magnitude;
-            magnitude = Mathf.MoveTowards(magnitude, 0, BrakeSpeed * Time.deltaTime);
-            velocity = velocity.normalized * magnitude;
+            var reverse = BrakeSpeed;
+            if (Scaler.CurrentScale == PlayerScale.Small)
+            {
+                reverse *= SmallSpeedMultiplier;
+            }
+            velocity += -forward * (reverse * brake * Time.deltaTime);
         }
 
         velocity.y = 0;
-        velocity = Vector3.ClampMagnitude(velocity, MaxVelocity);
+        var dot = Vector3.Dot(transform.forward, velocity);  
+        velocity = Vector3.ClampMagnitude(velocity, dot > 0 ? maxVelocity : maxReverse);
         Rigidbody.linearVelocity = velocity;
     }
 
@@ -207,6 +165,11 @@ public class DrivingController : MonoBehaviour
         var maxTurnSpeed = MaxTurnSpeed * Mathf.Deg2Rad; 
         var horizontalInput = Input.GetAxis("Horizontal");
         var turnSpeed = horizontalInput * TurnAcceleration * Mathf.Deg2Rad;
+        if (_drift)
+        {
+            maxTurnSpeed *= HandbrakeTurnFactor;
+            turnSpeed *= HandbrakeTurnFactor;
+        }
         
         var angVel = Rigidbody.angularVelocity;
         if (horizontalInput != 0 && velocity.magnitude > MinimumSpeedToTurn)
@@ -224,6 +187,8 @@ public class DrivingController : MonoBehaviour
         {
             angVel.y = Mathf.MoveTowards(angVel.y, 0, TurnAcceleration * Mathf.Deg2Rad * Time.deltaTime);
         }
+
+
 
         angVel.x = 0;
         angVel.z = 0;
