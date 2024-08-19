@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,9 @@ public class WinScreen : MonoBehaviour
     public AudioSource GameMusic;
     public AudioSource WinScreenMusic;
     private Canvas Canvas;
+    public TMP_Text ScoreText;
+    public TMP_Text CompletedText;
+    public TMP_Text FailedText;
     
     void Start()
     {
@@ -30,12 +34,16 @@ public class WinScreen : MonoBehaviour
         WinScreenMusic.Play();
         WinScreenMusic.time = 0f;
         Time.timeScale = 0f;
+
+        ScoreText.text = $"{PlayerHUD.Score}";
+        CompletedText.text = $"{PlayerHUD.CompletedDeliveries}";
+        FailedText.text = $"{PlayerHUD.FailedDeliveries}";
     }
 
     public void Replay()
     {
-        SceneManager.LoadScene("Bootstrap", LoadSceneMode.Single);
         //Time.timeScale = 1f;
+        SceneManager.LoadScene("Bootstrap", LoadSceneMode.Single);
     }
 
     public void Quit()

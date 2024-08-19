@@ -6,6 +6,7 @@ public class Order : MonoBehaviour
     public const float ORDER_TIME = 30f;
     private HUD playerHUD;
     public float _timer;
+    public bool IsPickedUp = false;
 
     [SerializeField] private float _pickupInteractionSeconds = 2f;
     [SerializeField] private GameObject _pickupMesh;
@@ -23,6 +24,7 @@ public class Order : MonoBehaviour
     private void Start()
     {
         playerHUD = FindFirstObjectByType<HUD>();
+        playerHUD.AddOrderIndicator(this);
     }
 
     public void Complete()
@@ -36,6 +38,7 @@ public class Order : MonoBehaviour
 
     private void OnPickup(Transform newParent)
     {
+        IsPickedUp = true;
         transform.parent = newParent;
         
         int orderID = GetInstanceID();
@@ -61,6 +64,7 @@ public class Order : MonoBehaviour
         _pickupMesh.gameObject.SetActive(false);
         
         playerHUD.AddIndicator(this);
+        playerHUD.RemoveOrderIndicator(this);
     }
     
     void Update()
@@ -70,6 +74,8 @@ public class Order : MonoBehaviour
         if (_timer <= 0f)
         {
             playerHUD.RemoveIndicator(this);
+            playerHUD.RemoveOrderIndicator(this);
+            playerHUD.AddFailedOrderIcon(this);
             Destroy(this.gameObject);
         }
     }
