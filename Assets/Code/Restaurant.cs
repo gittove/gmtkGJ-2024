@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Restaurant : MonoBehaviour
@@ -14,7 +13,7 @@ public class Restaurant : MonoBehaviour
     void Start()
     {
         _depletionWeight = 1f;
-        _weight = UnityEngine.Random.Range(0.1f, 0.9f);
+        _weight = Random.Range(0.1f, 0.9f);
     }
 
     void Update()

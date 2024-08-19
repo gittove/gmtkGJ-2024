@@ -1,4 +1,3 @@
-using System;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ public class Order : MonoBehaviour
 {
     private HUD playerHUD;
     public float _timer;
-    
+
     [SerializeField] private float _pickupInteractionSeconds = 2f;
     [SerializeField] private GameObject _pickupMesh;
 
@@ -50,8 +49,8 @@ public class Order : MonoBehaviour
                 return;
             }
         }
-            
-        customers[pickIndex].GetComponent<Customer>().Activate(orderID);
+        
+        customers[pickIndex].GetComponent<Customer>().Activate(orderID, this.gameObject);
         
         _interactionTimer = _pickupInteractionSeconds;
         GetComponent<BoxCollider>().enabled = false;
@@ -66,7 +65,8 @@ public class Order : MonoBehaviour
 
         if (_timer <= 0f)
         {
-            Destroy(this);
+            playerHUD.RemoveIndicator(this);
+            Destroy(this.gameObject);
         }
     }
 
