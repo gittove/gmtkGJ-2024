@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ResturantManager : MonoBehaviour
 {
+    [SerializeField] private float _orderSpawnTimer = 15;
+    
     public int MaxActiveRestaurants = 2;
     
     private float _timer;
@@ -11,9 +13,7 @@ public class ResturantManager : MonoBehaviour
     private Restaurant[] _restaurants;
 
     private Queue<Restaurant> _orderQueue;
-    
-    public delegate void OnOrder();
-    
+
     void Start()
     {
         _timer = 5f;
@@ -36,7 +36,7 @@ public class ResturantManager : MonoBehaviour
         if (_timer <= 0)
         {
             TryActivateOrder();
-            _timer = 5f;
+            _timer = _orderSpawnTimer;
         }
     }
 

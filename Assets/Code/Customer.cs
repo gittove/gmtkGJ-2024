@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
     private bool _occupied;
     private DeliverySquare _deliverSquare;
+    private GameObject _order;
 
     [SerializeField] private float _deliverInteractionTimeSeconds = 2f;
     public bool Occupied => _occupied;
@@ -14,12 +16,21 @@ public class Customer : MonoBehaviour
         _deliverSquare.gameObject.SetActive(false);
     }
 
-    public void Activate(int orderID)
+    private void Update()
+    {
+        if (_occupied && _order == null)
+        {
+            Reset();
+        }
+    }
+
+    public void Activate(int orderID, GameObject order)
     {
         _deliverSquare.gameObject.SetActive(true);
         _deliverSquare.Setup(orderID, _deliverInteractionTimeSeconds);
         _deliverSquare.DeliverEvent += OnDeliver;
-        
+
+        _order = order;
         _occupied = true;
     }
 

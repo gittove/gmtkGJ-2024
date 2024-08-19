@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Restaurant : MonoBehaviour
@@ -8,18 +7,19 @@ public class Restaurant : MonoBehaviour
     
     private float _weight;
     private float _depletionWeight;
+    private GameObject _orderObject;
 
     public float Weight => _weight * _depletionWeight;
 
     void Start()
     {
         _depletionWeight = 1f;
-        _weight = UnityEngine.Random.Range(0.1f, 0.9f);
+        _weight = Random.Range(0.1f, 0.9f);
     }
 
     void Update()
     {
-        
+
     }
 
     public void ActivateOrder()
