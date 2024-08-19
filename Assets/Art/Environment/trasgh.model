@@ -1,0 +1,39 @@
+# Made using Asset Forge (2.4.1)
+
+:materials
+
+[name:stone;color:RGBA(0.869, 0.842, 0.304, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.5;valueB:0;]
+[name:bricksDark;color:RGBA(0.878, 0.271, 0.271, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:bricks;color:RGBA(1.000, 0.392, 0.306, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:foliage;color:RGBA(0.218, 0.317, 0.292, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:metalLight;color:RGBA(0.194, 0.193, 0.207, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0.25;]
+[name:glass;color:RGBA(0.379, 0.359, 0.359, 1.000);scale:(1.0, 1.0);shader:Unlit;mapping:0;]
+[name:custom6;color:RGBA(0.234, 0.221, 0.221, 1.000);scale:(1.0, 1.0);shader:Unlit;mapping:0;]
+[name:stoneLight;color:RGBA(0.710, 0.701, 0.840, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.5;valueB:0;]
+[name:_defaultMat;color:RGBA(0.318, 0.475, 1.000, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0.25;]
+[name:metalPurple;color:RGBA(0.000, 0.134, 0.572, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:light;color:RGBA(0.945, 0.949, 0.965, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0;valueB:0;]
+[name:custom11;color:RGBA(0.566, 0.425, 0.834, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:custom12;color:RGBA(0.231, 0.142, 0.400, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+[name:custom13;color:RGBA(0.490, 0.490, 0.490, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0;valueB:0;]
+[name:stoneDark;color:RGBA(0.403, 0.390, 0.594, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.5;valueB:0;]
+[name:wood;color:RGBA(0.448, 0.272, 0.216, 1.000);scale:(1.0, 1.0);shader:Default;mapping:0;valueA:0.35;valueB:0;]
+
+:models
+
+[name:;collection:Foliage;type:trunk;position:(-0.0663, -0.0051, -0.4804);rotation:(0.0000, 285.0000, 285.0000);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:stoneLight;]
+[name:;collection:Foliage;type:trunk;position:(-0.0203, 0.0000, -0.1927);rotation:(14.4775, 179.4959, 266.0329);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:custom13;]
+[name:;collection:Foliage;type:trunk;position:(-0.2215, 0.0366, 0.0026);rotation:(14.4775, 179.4959, 266.0329);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:_defaultMat;]
+[name:;collection:Foliage;type:plant_largeLeaf;position:(0.4024, -0.0601, 0.1806);rotation:(15.0000, 285.0000, 60.0000);scale:(0.3000, 0.3000, 0.3000);group:;locked:False;hidden:False;materials:foliage;]
+[name:;collection:Foliage;type:trunk;position:(0.4786, 0.0335, -0.1970);rotation:(14.4775, 179.4959, 266.0329);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:custom11;]
+[name:;collection:Foliage;type:trunk;position:(0.4528, 0.0309, -0.2001);rotation:(352.5645, 75.8526, 256.9357);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:bricksDark;]
+[name:;collection:Foliage;type:trunk;position:(-0.1214, 0.0335, -0.1970);rotation:(14.4775, 179.4959, 266.0329);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:custom11;]
+[name:;collection:Foliage;type:trunk;position:(-0.1472, 0.0309, -0.2001);rotation:(352.5645, 75.8526, 256.9357);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:bricksDark;]
+[name:;collection:Foliage;type:plant_largeLeaf;position:(0.5059, -0.0601, 0.5670);rotation:(15.0000, 285.0000, 0.0000);scale:(0.3000, 0.3000, 0.3000);group:;locked:False;hidden:False;materials:stone;]
+[name:;collection:Foliage;type:trunk;position:(-0.1214, 0.0335, 0.3030);rotation:(14.4775, 179.4959, 266.0329);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:custom13;]
+[name:;collection:Foliage;type:trunk;position:(-0.1472, 0.0309, 0.2999);rotation:(352.5645, 75.8526, 256.9357);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:bricksDark;]
+[name:;collection:Foliage;type:trunk;position:(-0.0630, 0.0335, 0.3156);rotation:(14.4775, 119.4959, 266.0329);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:custom11;]
+[name:;collection:Foliage;type:trunk;position:(-0.0733, 0.0309, 0.2917);rotation:(352.5645, 15.8526, 256.9357);scale:(0.1000, 0.1500, 0.1000);group:;locked:False;hidden:False;materials:bricksDark;]
+[name:;collection:Foliage;type:plant_largeLeaf;position:(-0.1000, -0.0500, -0.6200);rotation:(0.0000, 285.0000, 0.0000);scale:(0.3000, 0.3000, 0.3000);group:;locked:False;hidden:False;materials:wood;]
+[name:;collection:Foliage;type:plant_largeLeaf;position:(-0.4400, -0.0300, -0.3200);rotation:(15.0000, 285.0000, 0.0000);scale:(0.3000, 0.3000, 0.3000);group:;locked:False;hidden:False;materials:foliage;]
+[name:;collection:Foliage;type:plant_largeLeaf;position:(-0.3300, -0.0500, 0.2700);rotation:(15.0000, 285.0000, 0.0000);scale:(0.3000, 0.3000, 0.3000);group:;locked:True;hidden:False;materials:metalLight;]
