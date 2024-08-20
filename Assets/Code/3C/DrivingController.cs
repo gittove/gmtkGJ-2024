@@ -32,6 +32,7 @@ public class DrivingController : MonoBehaviour
     private bool isRunning;
     private bool wasRunning;
 
+    public UnityEvent<bool> _reverse;
     public UnityEvent<bool> _driftChange;
     public UnityEvent _startDriving;
     public UnityEvent _endDriving;
@@ -149,6 +150,7 @@ public class DrivingController : MonoBehaviour
         }
         if (brake > 0)
         {
+            _reverse.Invoke(true);
             var reverse = BrakeSpeed;
             if (Scaler.CurrentScale == PlayerScale.Small)
             {
@@ -165,6 +167,10 @@ public class DrivingController : MonoBehaviour
                 magnitude = Mathf.MoveTowards(magnitude, 0, BrakeSpeed * Time.deltaTime);
                 velocity = velocity.normalized * magnitude;
             }
+        }
+        else
+        {
+            _reverse.Invoke(false);
         }
 
         velocity.y = 0;
