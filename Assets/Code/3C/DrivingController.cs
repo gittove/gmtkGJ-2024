@@ -23,7 +23,6 @@ public class DrivingController : MonoBehaviour
     
     public float MaxVelocity = 20f;
     public float MaxReverseVelocity = 5f;
-    public float MaxVelocityBoost = 40f;
 
     private ScaleReciever Scaler;
     
@@ -53,23 +52,13 @@ public class DrivingController : MonoBehaviour
         var handbrake = Input.GetAxis("Jump");
         _forceDrift = handbrake > 0;
         
-        var boosting = Input.GetKey(KeyCode.LeftShift);
-        
-        float maxVelocity = MaxVelocity;
-        
-        if (boosting)
-        {
-            maxVelocity = MaxVelocityBoost;
-        }
-        
         var facingDotVelocity = math.dot(transform.forward, Rigidbody.linearVelocity.normalized);
         Slippage = facingDotVelocity;
-
-        var desiredDirection = transform.forward;
-        var speedMultiplier = math.unlerp(0f, MaxVelocity, Rigidbody.linearVelocity.magnitude);
-        speedMultiplier = math.clamp(speedMultiplier, MinimumSpeedToTurn, 1f);
-        if (Rigidbody.linearVelocity.magnitude == 0f)
-            speedMultiplier = 0f;
+        
+        if (Rigidbody.linearVelocity.magnitude < 0.1f)
+        {
+            Slippage = 1;
+        }
 
         Accelerate();
         Turning();
@@ -77,14 +66,14 @@ public class DrivingController : MonoBehaviour
         Compensate();
 
         const float driftFactor = 0.88f;
-        if ((Slippage < driftFactor && ! _drift || _forceDrift) && Rigidbody.linearVelocity.magnitude > 0.1f)
+        if ((Slippage < driftFactor && ! _drift || _forceDrift) && Rigidbody.linearVelocity.magnitude > 0.25f)
         {
             _drift = true;
             _driftChange.Invoke(_drift);
         }
         if (Slippage > driftFactor && _drift)
         {
-            if (!_forceDrift)
+            if (!_forceDrift || Rigidbody.linearVelocity.magnitude < 0.25f)
             {
                 _drift = false;
                 _driftChange.Invoke(_drift);
