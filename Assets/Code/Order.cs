@@ -6,7 +6,6 @@ public class Order : MonoBehaviour
     public float PICKUP_TIME = 30f;
     public float DELIVER_TIME = 60f;
     private HUD playerHUD;
-    //public float _timer;
     private float _deliveryTimer;
     private float _pickupTimer;
     private float _score;
@@ -25,6 +24,8 @@ public class Order : MonoBehaviour
         _interactionTimer = _pickupInteractionSeconds;
         _pickupTimer = PICKUP_TIME;
         _deliveryTimer = DELIVER_TIME;
+
+        IsPickedUp = false;
     }
 
      public float GetTimer()
@@ -106,11 +107,11 @@ public class Order : MonoBehaviour
     {
         if (IsPickedUp)
         {
-            _pickupTimer -= Time.deltaTime;
+            _deliveryTimer -= Time.deltaTime;
         }
         else
         {
-            _deliveryTimer -= Time.deltaTime;
+            _pickupTimer -= Time.deltaTime;
         }
         if (_pickupTimer <= 0f || _deliveryTimer <= 0f)
         {
