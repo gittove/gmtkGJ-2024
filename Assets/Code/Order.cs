@@ -29,7 +29,7 @@ public class Order : MonoBehaviour
 
     public void Complete()
     {
-        float score = 300;
+        float score = 1000;
         score *= _timer / ORDER_TIME;
         playerHUD.GainScore((int)score);
         playerHUD.RemoveIndicator(this);
