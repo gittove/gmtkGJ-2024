@@ -42,8 +42,7 @@ public class WinScreen : MonoBehaviour
 
     public void Replay()
     {
-        //Time.timeScale = 1f;
-        SceneManager.LoadScene("Bootstrap", LoadSceneMode.Single);
+        SceneManager.LoadScene(1);
     }
 
     public void Quit()

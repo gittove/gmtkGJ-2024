@@ -13,6 +13,8 @@ public class TutorialScreen : MonoBehaviour
         PlayerHUD = FindFirstObjectByType<HUD>();
         PlayerHUD.GetComponent<Canvas>().enabled = false;
         MusicPlayer.Stop();
+        if(PlayerPrefs.GetInt("playedBefore") == 1)
+            Resume();
     }
 
     void Update()
@@ -25,6 +27,7 @@ public class TutorialScreen : MonoBehaviour
 
     public void Resume()
     {
+        PlayerPrefs.SetInt("playedBefore", 1);
         PlayerHUD.GetComponent<Canvas>().enabled = true;
         Deactivated = true;
         GetComponent<Canvas>().enabled = false;
