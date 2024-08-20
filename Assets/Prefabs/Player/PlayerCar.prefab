@@ -653,7 +653,6 @@ MonoBehaviour:
   SmallSpeedMultiplier: 0.35
   MaxVelocity: 35
   MaxReverseVelocity: 5
-  MaxVelocityBoost: 80
   Rigidbody: {fileID: 9173743438842922095}
   DrivingEmitter: {fileID: 6572406052255396915}
   _driftChange:
@@ -6377,8 +6376,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5033392911782669144}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00033591976, y: 0.82952917, z: -0.5584632, w: 0.00049896794}
-  m_LocalPosition: {x: -0.0104541825, y: 21.399998, z: 8.689996}
+  m_LocalRotation: {x: 0.5584632, y: -0.000000116113746, z: 0.00000007812912, w: 0.82952935}
+  m_LocalPosition: {x: 0, y: 21.4, z: -8.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6842,8 +6841,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 78c6c8e5cefe67048849593acdd9a556, type: 3}
-  m_Resource: {fileID: 8300000, guid: 78c6c8e5cefe67048849593acdd9a556, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b80248792cf7e2c4f9b3396a32a80403, type: 3}
+  m_Resource: {fileID: 8300000, guid: b80248792cf7e2c4f9b3396a32a80403, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
