@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class Order : MonoBehaviour
 {
-    public const float PICKUP_TIME = 60f;
-    public const float DELIVER_TIME = 30f;
+    public float PICKUP_TIME = 30f;
+    public float DELIVER_TIME = 60f;
     private HUD playerHUD;
     //public float _timer;
-    public float _deliveryTimer;
-    public float _pickupTimer;
+    private float _deliveryTimer;
+    private float _pickupTimer;
     private float _score;
     public bool IsPickedUp = false;
     public GameObject ThrownFood;
