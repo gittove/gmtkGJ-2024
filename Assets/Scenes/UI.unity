@@ -431,7 +431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 397, y: 33}
+  m_AnchoredPosition: {x: 397, y: 52.66}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129465404
@@ -760,8 +760,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 195a9ec987c69e04f8b8ab428fc76663, type: 3}
-  m_Resource: {fileID: 8300000, guid: 195a9ec987c69e04f8b8ab428fc76663, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e901ab0cb7c2a1b42b94e008dc4f5c3e, type: 3}
+  m_Resource: {fileID: 8300000, guid: e901ab0cb7c2a1b42b94e008dc4f5c3e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.286
   m_Pitch: 1
@@ -956,7 +956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &377569147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1897,7 +1897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3. Repeat until the time runs out!
+  m_text: 3. Press 'Q' to become small to take shortcuts
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3233,7 +3233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 33}
+  m_AnchoredPosition: {x: 10, y: 52.66}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070720977
@@ -3442,7 +3442,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 54.6}
-  m_SizeDelta: {x: 1200, y: 430}
+  m_SizeDelta: {x: 1200, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127859535
 MonoBehaviour:
@@ -3763,7 +3763,7 @@ RectTransform:
   m_Father: {fileID: 983999138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3952,7 +3952,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 33}
+  m_AnchoredPosition: {x: -400, y: 52.66}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253754962
@@ -4268,7 +4268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1482350298}
   GameTimerText: {fileID: 433474281}
-  GameTime: 1
+  GameTime: 5.15
   ScoreSound: {fileID: 1075468515}
   PickupSound: {fileID: 783607480}
   CallSound: {fileID: 977366250}
@@ -6410,8 +6410,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1662464178}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 54.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

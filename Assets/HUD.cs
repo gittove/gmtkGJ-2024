@@ -28,7 +28,7 @@ public class HUD : MonoBehaviour
     
     public TMP_Text ScoreText;
     public TMP_Text GameTimerText;
-    public int GameTime = 5;
+    public double GameTime = 5.15;
     private float gameTimer;
 
     public AudioSource ScoreSound;

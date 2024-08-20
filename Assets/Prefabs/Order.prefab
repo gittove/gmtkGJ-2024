@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timer: 0
   IsPickedUp: 0
+  ThrownFood: {fileID: 1768228790039244014, guid: c32a322998aad82419458c0d345ed8a4, type: 3}
   _pickupInteractionSeconds: 0.5
   _pickupMesh: {fileID: 3351082933000264902}
 --- !u!65 &1857994055600997682
