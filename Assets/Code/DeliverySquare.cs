@@ -9,12 +9,15 @@ public class DeliverySquare : MonoBehaviour
     
     public delegate void OnDeliver();
     public OnDeliver DeliverEvent;
+    public Vector3 ParentDropOffPoint;
 
-    public void Setup(int orderID, float deliverTimeSeconds)
+    public void Setup(int orderID, float deliverTimeSeconds, Transform parentTransform)
     {
         OrderID = orderID;
         _deliverInteractionTimeSeconds = deliverTimeSeconds;
         _interactionTimer = _deliverInteractionTimeSeconds;
+        ParentDropOffPoint = parentTransform.position + ((transform.position - parentTransform.position) / 3f);
+        ParentDropOffPoint.y = transform.position.y;
     }
     
     private void OnTriggerStay(Collider other)

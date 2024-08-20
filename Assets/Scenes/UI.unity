@@ -956,7 +956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &377569147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3763,7 +3763,7 @@ RectTransform:
   m_Father: {fileID: 983999138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4268,7 +4268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1482350298}
   GameTimerText: {fileID: 433474281}
-  GameTime: 5
+  GameTime: 5.15
   ScoreSound: {fileID: 1075468515}
   PickupSound: {fileID: 783607480}
   CallSound: {fileID: 977366250}
@@ -6270,7 +6270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1887522893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6410,8 +6410,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1662464178}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 54.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

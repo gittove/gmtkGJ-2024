@@ -7,6 +7,7 @@ public class Order : MonoBehaviour
     private HUD playerHUD;
     public float _timer;
     public bool IsPickedUp = false;
+    public GameObject ThrownFood;
 
     [SerializeField] private float _pickupInteractionSeconds = 2f;
     [SerializeField] private GameObject _pickupMesh;
@@ -34,6 +35,7 @@ public class Order : MonoBehaviour
         playerHUD.GainScore((int)score);
         playerHUD.RemoveIndicator(this);
         Destroy(this.gameObject);
+        ThrowFood();
     }
 
     private void OnPickup(Transform newParent)
@@ -65,6 +67,22 @@ public class Order : MonoBehaviour
         
         playerHUD.AddIndicator(this);
         playerHUD.RemoveOrderIndicator(this);
+    }
+
+    void ThrowFood()
+    {
+        var food = Instantiate(ThrownFood);
+        var thrown = food.GetComponent<ThrownFood>();
+        thrown.SourcePosition = FindFirstObjectByType<DrivingController>().gameObject.transform.position;
+        var squares = FindObjectsByType<DeliverySquare>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        foreach (var square in squares)
+        {
+            if (square.OrderID == GetInstanceID())
+            {
+                thrown.TargetPosition = square.ParentDropOffPoint;
+                break;
+            }
+        }
     }
     
     void Update()

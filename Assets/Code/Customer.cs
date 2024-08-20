@@ -27,7 +27,7 @@ public class Customer : MonoBehaviour
     public void Activate(int orderID, GameObject order)
     {
         _deliverSquare.gameObject.SetActive(true);
-        _deliverSquare.Setup(orderID, _deliverInteractionTimeSeconds);
+        _deliverSquare.Setup(orderID, _deliverInteractionTimeSeconds, transform);
         _deliverSquare.DeliverEvent += OnDeliver;
 
         _order = order;
