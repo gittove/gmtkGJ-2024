@@ -599,39 +599,30 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: -0.57237446
-      outSlope: -0.57237446
+      inSlope: -0.013429236
+      outSlope: -0.013429236
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.21950734
-      value: 0.8743596
-      inSlope: -1.3930364
-      outSlope: -1.3930364
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.10945572
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.3634887
-      value: 0.74629354
-      inSlope: -0.30128935
-      outSlope: -0.30128935
+      time: 0.6227375
+      value: 0.9916371
+      inSlope: -0.0048012827
+      outSlope: -0.0048012827
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.10303362
+      outWeight: 0.24090914
     - serializedVersion: 3
-      time: 1.0055318
-      value: 0.65
-      inSlope: -0.1499799
-      outSlope: -0.1499799
+      time: 0.99440557
+      value: 0.9685053
+      inSlope: -0.062237766
+      outSlope: -0.062237766
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0
+      outWeight: 0.10303362
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -714,10 +705,34 @@ MonoBehaviour:
         m_CallState: 2
   _startDriving:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6572406052255396915}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _endDriving:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6572406052255396915}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Slippage: 0
 --- !u!54 &9173743438842922095
 Rigidbody:
@@ -6252,8 +6267,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5033392911782669144}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5584632, y: -0.000000116113746, z: 0.00000007812912, w: 0.82952935}
-  m_LocalPosition: {x: 0, y: 21.4, z: -8.69}
+  m_LocalRotation: {x: 0.00033591976, y: 0.82952917, z: -0.5584632, w: 0.00049896794}
+  m_LocalPosition: {x: -0.0104541825, y: 21.399998, z: 8.689996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
