@@ -31,6 +31,11 @@ public class HUD : MonoBehaviour
     public int GameTime = 5;
     private float gameTimer;
 
+    public AudioSource ScoreSound;
+    public AudioSource PickupSound;
+    public AudioSource CallSound;
+    public AudioSource FailSound;
+
     public GameObject DeliveryScreenIndicator;
     public GameObject OrderScreenIndicator;
     public GameObject FailedOrderScreenIndicator;
@@ -72,6 +77,7 @@ public class HUD : MonoBehaviour
         indicator.Order = order;
         DeliveryIndicators.Add(indicator);
         RemoveOrderIndicator(order);
+        PickupSound.Play();
     }
 
     public void AddOrderIndicator(Order order)
@@ -84,6 +90,7 @@ public class HUD : MonoBehaviour
         indicator.Indicator = newObj;
         indicator.Order = order;
         OrderIndicators.Add(indicator);
+        CallSound.Play();
     }
 
     public void AddFailedOrderIcon(Order order)
@@ -120,6 +127,7 @@ public class HUD : MonoBehaviour
         }
 
         FailedOrderIndicators.Add(indicator); 
+        FailSound.Play();
     }
 
     public void RemoveIndicator(Order order)
@@ -292,5 +300,6 @@ public class HUD : MonoBehaviour
         Score += score;
         ScoreText.text = $"{Score}";
         CompletedDeliveries++;
+        ScoreSound.Play();
     }
 }
