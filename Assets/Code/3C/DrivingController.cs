@@ -33,6 +33,8 @@ public class DrivingController : MonoBehaviour
     private bool wasRunning;
 
     public UnityEvent<bool> _driftChange;
+    public UnityEvent _startDriving;
+    public UnityEvent _endDriving;
     private bool braking;
 
     private float Speed;
@@ -40,6 +42,7 @@ public class DrivingController : MonoBehaviour
     public float Slippage;
     private bool _drift;
     private bool _forceDrift;
+    private bool _driving;
 
     private void Start()
     {
@@ -114,13 +117,29 @@ public class DrivingController : MonoBehaviour
         
         if (accel > 0)
         {
-            var speed = Rigidbody.linearVelocity.magnitude;
-            var acceleration = AccelerationCurve.Evaluate(speed / maxVelocity) * Acceleration;
-            if (Scaler.CurrentScale == PlayerScale.Small)
+            if (!_driving)
             {
-                acceleration *= SmallSpeedMultiplier;
+                _driving = true;
+                _startDriving.Invoke();
             }
-            velocity += forward * (acceleration * accel * Time.deltaTime);
+
+            if (!_forceDrift)
+            {
+                var speed = Rigidbody.linearVelocity.magnitude;
+                var acceleration = AccelerationCurve.Evaluate(speed / maxVelocity) * Acceleration;
+                if (Scaler.CurrentScale == PlayerScale.Small)
+                {
+                    acceleration *= SmallSpeedMultiplier;
+                }
+
+                velocity += forward * (acceleration * accel * Time.deltaTime);
+            }
+            else
+            {
+                var magnitude = velocity.magnitude;
+                magnitude = Mathf.MoveTowards(magnitude, 0, EngineBrake * Time.deltaTime);
+                velocity = velocity.normalized * magnitude;
+            }
         }
         else
         {
