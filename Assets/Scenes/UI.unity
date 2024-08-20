@@ -760,8 +760,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 195a9ec987c69e04f8b8ab428fc76663, type: 3}
-  m_Resource: {fileID: 8300000, guid: 195a9ec987c69e04f8b8ab428fc76663, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e901ab0cb7c2a1b42b94e008dc4f5c3e, type: 3}
+  m_Resource: {fileID: 8300000, guid: e901ab0cb7c2a1b42b94e008dc4f5c3e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.286
   m_Pitch: 1
@@ -4268,7 +4268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 1482350298}
   GameTimerText: {fileID: 433474281}
-  GameTime: 1
+  GameTime: 5
   ScoreSound: {fileID: 1075468515}
   PickupSound: {fileID: 783607480}
   CallSound: {fileID: 977366250}
