@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9537ed2d8219ca044a3ef85bd090531f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _orderSpawnTimer: 10
   MaxActiveRestaurants: 2

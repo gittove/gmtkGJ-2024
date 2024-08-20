@@ -49,12 +49,12 @@ public class ResturantManager : MonoBehaviour
         {
             return;
         }
-
-        int tickCount = 0; //Ugly pls fix properly
+        
+        int attemptCount = 0;
         var pickedRestaurant = _orderQueue.Dequeue();
-        while (pickedRestaurant.gameObject.GetComponentInChildren<Order>() != null && tickCount < 1000)
+        while (pickedRestaurant.gameObject.GetComponentInChildren<Order>() != null && attemptCount < _restaurants.Length)
         {
-            tickCount++;
+            attemptCount++;
             pickedRestaurant = _orderQueue.Dequeue();
 
             if (_orderQueue.Count == 0)

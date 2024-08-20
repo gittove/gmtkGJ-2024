@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a985bc40da3bf7d459e30c674de214a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timer: 0
+  _timer: 60
+  _deliveryTimer: 0
+  _pickupTimer: 0
   IsPickedUp: 0
   ThrownFood: {fileID: 1768228790039244014, guid: c32a322998aad82419458c0d345ed8a4, type: 3}
   _pickupInteractionSeconds: 0.5
