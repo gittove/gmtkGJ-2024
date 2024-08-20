@@ -126,6 +126,7 @@ public class HUD : MonoBehaviour
             }
         }
 
+        FailedDeliveries++;
         FailedOrderIndicators.Add(indicator); 
         FailSound.Play();
     }
@@ -136,8 +137,6 @@ public class HUD : MonoBehaviour
         {
             if (indicator.Order == order)
             {
-                if (order.GetTimer() <= 0f)
-                    FailedDeliveries++;
                 DeliveryIndicators.Remove(indicator);
                 Destroy(indicator.Indicator);
                 break;
@@ -151,8 +150,6 @@ public class HUD : MonoBehaviour
         {
             if (indicator.Order == order)
             {
-                if (order.GetTimer() <= 0f)
-                    FailedDeliveries++;
                 OrderIndicators.Remove(indicator);
                 Destroy(indicator.Indicator);
                 break;
