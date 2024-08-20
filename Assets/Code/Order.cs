@@ -20,7 +20,7 @@ public class Order : MonoBehaviour
 
     public float3 Position => gameObject.transform.position;
 
-    public void Setup(float timer)
+    public void Setup()
     {
         _interactionTimer = _pickupInteractionSeconds;
         _pickupTimer = PICKUP_TIME;
