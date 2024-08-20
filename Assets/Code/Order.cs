@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class Order : MonoBehaviour
 {
-    public const float TIME = 60f;
-    //public const float DELIVER_TIME = 30f;
+    public const float PICKUP_TIME = 60f;
+    public const float DELIVER_TIME = 30f;
     private HUD playerHUD;
-    public float _timer;
-    //public float _deliveryTimer;
-    //public float _pickupTimer;
+    //public float _timer;
+    public float _deliveryTimer;
+    public float _pickupTimer;
+    private float _score;
     public bool IsPickedUp = false;
     public GameObject ThrownFood;
 
@@ -22,31 +23,32 @@ public class Order : MonoBehaviour
     public void Setup(float timer)
     {
         _interactionTimer = _pickupInteractionSeconds;
-        _timer = TIME;
-        //_deliveryTimer = DELIVER_TIME;
+        _pickupTimer = PICKUP_TIME;
+        _deliveryTimer = DELIVER_TIME;
     }
 
-    // public float GetTimer()
-    // {
-        // if (IsPickedUp)
-        // {
-        //     return _deliveryTimer / DELIVER_TIME;
-        // }
-        //
-        // return _pickupTimer / PICKUP_TIME;
-    //}
+     public float GetTimer()
+     {
+         if (IsPickedUp)
+         {
+             return _deliveryTimer / DELIVER_TIME;
+         }
+        
+         return _pickupTimer / PICKUP_TIME;
+    }
 
     private void Start()
     {
         playerHUD = FindFirstObjectByType<HUD>();
         playerHUD.AddOrderIndicator(this);
+
+        _score = 1000;
     }
 
     public void Complete()
     {
-        float score = 1000;
-        score *= _timer / TIME;
-        playerHUD.GainScore((int)score);
+        _score += (1000 * _deliveryTimer / DELIVER_TIME) * 0.5f;
+        playerHUD.GainScore((int)_score);
         playerHUD.RemoveIndicator(this);
         Destroy(this.gameObject);
         ThrowFood();
@@ -56,6 +58,7 @@ public class Order : MonoBehaviour
     {
         IsPickedUp = true;
         transform.parent = newParent;
+        _score += (1000 * _pickupTimer / PICKUP_TIME) * 0.5f;
         
         int orderID = GetInstanceID();
 
@@ -101,9 +104,15 @@ public class Order : MonoBehaviour
     
     void Update()
     {
-        _timer -= Time.deltaTime;
-
-        if (_timer <= 0f)
+        if (IsPickedUp)
+        {
+            _pickupTimer -= Time.deltaTime;
+        }
+        else
+        {
+            _deliveryTimer -= Time.deltaTime;
+        }
+        if (_pickupTimer <= 0f || _deliveryTimer <= 0f)
         {
             playerHUD.RemoveIndicator(this);
             playerHUD.RemoveOrderIndicator(this);

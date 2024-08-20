@@ -136,7 +136,7 @@ public class HUD : MonoBehaviour
         {
             if (indicator.Order == order)
             {
-                if (order._timer <= 0f)
+                if (order.GetTimer() <= 0f)
                     FailedDeliveries++;
                 DeliveryIndicators.Remove(indicator);
                 Destroy(indicator.Indicator);
@@ -151,7 +151,7 @@ public class HUD : MonoBehaviour
         {
             if (indicator.Order == order)
             {
-                if (order._timer <= 0f)
+                if (order.GetTimer() <= 0f)
                     FailedDeliveries++;
                 OrderIndicators.Remove(indicator);
                 Destroy(indicator.Indicator);
@@ -221,7 +221,7 @@ public class HUD : MonoBehaviour
             }
 
             var indicatorTimer = delivery.Indicator.GetComponentInChildren<Slider>();
-            indicatorTimer.value = delivery.Order._timer / Order.ORDER_TIME;
+            indicatorTimer.value = delivery.Order.GetTimer();
             
             var deliveryDirection = deliveryPos - Player.gameObject.transform.position;
             var depth = Vector3.Dot(deliveryPos - MainCamera.transform.position, MainCamera.transform.forward);

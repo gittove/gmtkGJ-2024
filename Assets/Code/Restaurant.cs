@@ -27,7 +27,7 @@ public class Restaurant : MonoBehaviour
         _depletionWeight = 1f;
 
         var newOrder = Instantiate(OrderPrefab, OrderSpawnAlign.transform);
-        newOrder.GetComponent<Order>().Setup(Order.TIME);
+        newOrder.GetComponent<Order>().Setup(Order.PICKUP_TIME);
     }
 
     public void Deplete()
