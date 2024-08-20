@@ -48,6 +48,6 @@ public class WinScreen : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit(0);
+        Application.Quit();
     }
 }
